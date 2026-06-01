@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title if post else 'Blog Post Not Found' }} | Armstrong Buys Houses{% endblock %}
+{% block canonical %}/blog/{{ slug }}{% endblock %}
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    {% if post %}
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.date }} &nbsp;·&nbsp; Armstrong Buys Houses Blog</p>
+    {% else %}
+    <h1>Post Not Found</h1>
+    {% endif %}
+  </div>
+</section>
+<section class="section">
+  <div class="container" style="display:grid; grid-template-columns:1fr 360px; gap:48px; align-items:start; max-width:1100px;">
+    <div>
+      {% if post %}
+      <div style="color:var(--text-mid); font-size:17px; line-height:1.9;">
+        <p style="margin-bottom:20px;">{{ post.content }}</p>
+        <p style="margin-bottom:20px;">If you're a Louisiana homeowner looking for a fast, fair solution, Armstrong Buys Houses is here to help. We've purchased hundreds of homes across all 64 Louisiana parishes — in any condition, any situation — with no fees, no commissions, and no repairs required.</p>
+        <p style="margin-bottom:20px;">Our process is simple: you contact us, we make you a cash offer within 24 hours, and we close on your schedule — sometimes in as little as 7 days. There are zero real estate commissions, zero closing costs, and zero repairs needed on your end.</p>
+        <p style="margin-bottom:20px;">Whether you're facing foreclosure, going through a divorce, dealing with an inherited property, or simply need to sell quickly — we have a solution. Give us a call at <a href="tel:+13372700518" style="color:var(--brand-green); font-weight:600;">(337) 270-0518</a> or fill out our online form to get your free, no-obligation cash offer today.</p>
+      </div>
+      {% else %}
+      <p style="color:var(--text-mid);">That blog post was not found. <a href="/blog">Browse all posts →</a></p>
+      {% endif %}
+      <div style="margin-top:48px; padding-top:32px; border-top:1px solid var(--border);">
+        <a href="/blog" style="color:var(--brand-green); font-weight:600;">← Back to Blog</a>
+      </div>
+    </div>
+    <div style="position:sticky; top:90px;">
+      <div class="offer-card" style="border-top:4px solid var(--brand-green);">
+        <h3 style="font-size:20px;">Get a Free Cash Offer</h3>
+        <p class="sub">Respond within 24 hours</p>
+        <form class="offer-form">
+          <div class="form-group">
+            <label>Property Address *</label>
+            <input type="text" name="address" placeholder="Your property address" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" name="phone" placeholder="(337) 270-0518" required />
+          </div>
+          <button type="submit" class="btn-primary">💰 Get My Cash Offer →</button>
+          <div class="success-msg">✅ We'll be in touch within 24 hours!</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

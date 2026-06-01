@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Sell Your House Fast in Louisiana | No Repairs, No Fees | Armstrong Buys Houses{% endblock %}
+{% block meta_desc %}Sell your Louisiana house fast for cash — in any condition, any situation. No repairs, no agent fees, no commissions. Armstrong Buys Houses serves all 64 Louisiana parishes.{% endblock %}
+{% block canonical %}/sell-your-house{% endblock %}
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>Sell Your Louisiana House Fast</h1>
+    <p>Any condition. Any situation. Any parish. Get a fair cash offer within 24 hours.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 380px; gap:64px; align-items:start;">
+      <div>
+        <h2 style="font-size:32px; margin-bottom:20px;">We Buy Louisiana Homes in Any Situation</h2>
+        <p style="color:var(--text-mid); font-size:17px; margin-bottom:24px;">Life doesn't always go as planned. Whether you're facing financial hardship, a major life change, or you simply need to move on quickly, Armstrong Buys Houses is here to help. We've helped hundreds of Louisiana homeowners sell their homes fast — without the hassle of traditional real estate.</p>
+
+        {% set situations = [
+          ('🏚️', 'Foreclosure', 'facing-foreclosure', 'Facing foreclosure is one of the most stressful situations a homeowner can experience. We can often close quickly enough to stop foreclosure before it happens, protecting your credit and giving you a fresh start. Don\'t wait — time is critical. Call us today.'),
+          ('⚖️', 'Divorce', 'divorce', 'When a marriage ends, the marital home often becomes a major point of contention. We make the process simple: one clean sale, cash in both hands, and the ability to move forward. No need to coordinate repairs or showings during an already difficult time.'),
+          ('📜', 'Inherited / Probate Property', 'inherited', 'Inheriting a property can be overwhelming, especially when it\'s in another city or needs significant work. We have experience working through probate situations and can help you sell inherited Louisiana property quickly and fairly.'),
+          ('🔨', 'Needs Major Repairs', 'repairs', 'Can\'t afford to fix the roof, foundation, plumbing, or HVAC? No problem. We buy homes in any condition and handle all repairs ourselves after closing. You pay nothing and walk away with cash.'),
+          ('💳', 'Behind on Mortgage Payments', 'behind', 'If you\'re behind on payments, every month that passes makes your situation worse. We can often close fast enough to catch you up and prevent foreclosure. Call us immediately — we\'ve helped many Louisiana homeowners in exactly this situation.'),
+          ('✈️', 'Relocation', 'relocation', 'Moving across the country for a new job or family reason? We\'ll buy your Louisiana home fast so you don\'t have to manage a long-distance sale. Get your money and go — we handle everything from here.'),
+          ('🏠', 'Problem Rental Property', 'rental', 'Tired of dealing with difficult tenants, late rent, constant maintenance calls, or extended vacancies? We buy rental properties with tenants in place. No need to evict anyone first.'),
+          ('📦', 'Downsizing', 'downsizing', 'If your children have moved out and your home feels too large, or you\'re ready to simplify your life, we make downsizing easy. Skip the months of showings and sell directly to us.'),
+          ('🌪️', 'Storm or Flood Damage', 'storm', 'Louisiana homeowners know all too well the damage that hurricanes and floods can cause. If your home has storm or flood damage and you don\'t want to deal with repairs and insurance claims, we\'ll buy it as-is.'),
+        ] %}
+
+        {% for icon, title, anchor, desc in situations %}
+        <div id="{{ anchor }}" style="margin-bottom:36px; padding-bottom:36px; border-bottom:1px solid var(--border);">
+          <h3 style="font-size:22px; margin-bottom:12px; display:flex; align-items:center; gap:12px;"><span>{{ icon }}</span> {{ title }}</h3>
+          <p style="color:var(--text-mid); font-size:16px; line-height:1.8;">{{ desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div style="position:sticky; top:90px;">
+        <div class="offer-card" style="border-top:4px solid var(--brand-green);">
+          <h3>Get Your Cash Offer Today</h3>
+          <p class="sub">No obligation — 24 hour response</p>
+          <form class="offer-form">
+            <div class="form-group">
+              <label>Property Address *</label>
+              <input type="text" name="address" placeholder="Full property address" required />
+            </div>
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" name="phone" placeholder="(337) 270-0518" required />
+            </div>
+            <div class="form-group">
+              <label>Your Situation</label>
+              <select name="reason">
+                <option value="">What best describes you?</option>
+                <option>Facing foreclosure</option>
+                <option>Going through divorce</option>
+                <option>Inherited property</option>
+                <option>Needs major repairs</option>
+                <option>Behind on payments</option>
+                <option>Relocating</option>
+                <option>Problem rental</option>
+                <option>Downsizing</option>
+                <option>Storm / flood damage</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary">💰 Get My Cash Offer →</button>
+            <div class="success-msg">✅ We'll contact you within 24 hours!</div>
+            <p class="form-disclaimer">Free. No obligation. No spam.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
