@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Reviews | What Louisiana Homeowners Say | Armstrong Buys Houses{% endblock %}
+{% block meta_desc %}Read real reviews from Louisiana homeowners who sold their homes fast with Armstrong Buys Houses. 5-star rated cash home buyers across all 64 Louisiana parishes.{% endblock %}
+{% block canonical %}/reviews{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>What Our Clients Say</h1>
+    <p>Real reviews from real Louisiana homeowners who sold their homes fast and easy.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div style="font-family:'Playfair Display',serif; font-size:64px; font-weight:900; color:var(--brand-green);">4.9</div>
+      <div style="color:var(--accent-gold); font-size:28px; margin-bottom:8px;">★★★★★</div>
+      <div style="color:var(--text-mid);">Based on 150+ verified reviews</div>
+    </div>
+
+    <div class="testimonials-grid" style="grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));">
+      {% set reviews = [
+        ('Marcus T.', 'New Orleans, Orleans Parish', '★★★★★', 'Armstrong made selling my home so easy. Cash offer in hours, closed in 10 days. No repairs, no showings — just cash. I\'ll recommend them to everyone.'),
+        ('Denise R.', 'Baton Rouge, East Baton Rouge Parish', '★★★★★', 'I was facing foreclosure and didn\'t know what to do. Armstrong stepped in, gave me a cash offer the same day, and we closed before the bank could foreclose. They literally saved me.'),
+        ('James L.', 'Shreveport, Caddo Parish', '★★★★★', 'Inherited my grandmother\'s house. It needed a lot of work. Armstrong bought it as-is for a fair price. The whole process took less than 2 weeks. Highly recommend!'),
+        ('Tanya M.', 'Lafayette, Lafayette Parish', '★★★★★', 'Going through a divorce and needed to sell fast. Armstrong was professional, compassionate, and made the whole process painless. Got a fair price and closed in 9 days.'),
+        ('Robert B.', 'Lake Charles, Calcasieu Parish', '★★★★★', 'My house had significant storm damage. I thought I\'d never sell it. Armstrong bought it as-is and gave me a price I was happy with. No questions, no drama.'),
+        ('Patricia W.', 'Metairie, Jefferson Parish', '★★★★★', 'I needed to relocate for a new job quickly. Armstrong bought my home in 8 days. The process was seamless and the team was incredibly professional throughout.'),
+        ('David H.', 'Covington, St. Tammany Parish', '★★★★★', 'We had a rental property with problem tenants. Armstrong bought it with tenants in place and handled everything. Great experience from start to finish.'),
+        ('Michelle C.', 'Hammond, Tangipahoa Parish', '★★★★★', 'I was skeptical at first about cash home buyers but Armstrong was completely transparent and honest. Their offer was fair and there were absolutely no hidden fees.'),
+        ('Anthony P.', 'Monroe, Ouachita Parish', '★★★★★', 'My mom passed and left us her home. None of us wanted to deal with repairs or listing it. Armstrong made it simple — fair offer, quick close, zero hassle.'),
+      ] %}
+      {% for name, location, stars, text in reviews %}
+      <div class="testimonial-card">
+        <div class="stars">{{ stars }}</div>
+        <p class="testimonial-text">"{{ text }}"</p>
+        <div class="reviewer">{{ name }}</div>
+        <div class="reviewer-location">{{ location }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div style="text-align:center; margin-top:48px;">
+      <a href="/cash-offer" class="btn-primary" style="display:inline-flex; width:auto;">💰 Get My Cash Offer</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

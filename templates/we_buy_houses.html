@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}We Buy Houses in Louisiana | All 64 Parishes | Armstrong Buys Houses{% endblock %}
+{% block meta_desc %}We buy houses fast in all 64 Louisiana parishes. Single family, multi-family, fixer-uppers, flood-damaged — any condition, any situation. Cash offer in 24 hours from Armstrong Buys Houses.{% endblock %}
+{% block canonical %}/we-buy-houses{% endblock %}
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>We Buy Houses in Louisiana</h1>
+    <p>Any house. Any condition. Any parish. Cash in hand in as little as 7 days.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container-sm">
+    <h2 style="font-size:32px; margin-bottom:20px; text-align:center;">What Types of Properties Do We Buy?</h2>
+    <p style="color:var(--text-mid); text-align:center; margin-bottom:40px; font-size:17px;">We buy virtually any type of residential property in Louisiana — in any condition.</p>
+    <div class="reasons-grid">
+      {% for icon, title, desc in [
+        ('🏠','Single Family Homes','The most common type we buy. Ranch, Creole cottage, Victorian — any style, any size, any condition.'),
+        ('🏘️','Multi-Family Properties','Duplexes, triplexes, and 4-plexes. Great for investors looking to exit or homeowners who need to sell fast.'),
+        ('🏗️','Fixer-Uppers','Outdated, damaged, or in disrepair — we see potential where others see problems. Buy as-is, guaranteed.'),
+        ('🌊','Flood & Storm Damaged','Louisiana weather can be brutal. We buy storm-damaged, flood-damaged, and hurricane-damaged homes statewide.'),
+        ('📋','Inherited/Probate Homes','We work through probate and estate situations to help heirs sell inherited Louisiana properties cleanly.'),
+        ('🔑','Rental Properties','Buy with tenants in place. No need to wait for leases to expire or deal with evictions.'),
+        ('📦','Vacant/Abandoned Homes','Vacant homes attract problems. If you have an abandoned property, we\'ll take it off your hands fast.'),
+        ('🌿','Hoarder Homes','Leave everything behind. We handle all cleanout, cleanup, and repairs after closing.'),
+        ('📍','Vacant Land','We also buy vacant lots and raw land throughout Louisiana parishes.'),
+      ] %}
+      <div class="reason-card">
+        <div class="reason-icon">{{ icon }}</div>
+        <h3>{{ title }}</h3>
+        <p>{{ desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center; margin-top:48px;">
+      <h3 style="margin-bottom:16px;">Ready to sell your Louisiana property?</h3>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="/cash-offer" class="btn-primary" style="display:inline-flex; width:auto;">💰 Get My Cash Offer</a>
+        <a href="tel:+13372700518" class="btn-secondary">📞 Call (337) 270-0518</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
