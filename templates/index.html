@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}Armstrong Buys Houses | We Buy Houses Fast in Louisiana — All 64 Parishes{% endblock %}
-{% block meta_desc %}We buy houses fast for cash in ALL 64 Louisiana parishes. Get a fair cash offer in 24 hours. No repairs, no fees, no real estate commissions. Call Armstrong Buys Houses today!{% endblock %}
-{% block meta_keys %}we buy houses Louisiana, sell my house fast Louisiana, cash home buyers Louisiana, sell house as-is Louisiana, cash offer Louisiana, Armstrong buys houses{% endblock %}
+{% block meta_desc %}Family-owned cash home buyers in ALL 64 Louisiana parishes. Get a fair cash offer in 24 hours. No repairs, no fees, no commissions. Armstrong Buys Houses — call (337) 270-0518!{% endblock %}
 {% block canonical %}/{% endblock %}
 
 {% block content %}
@@ -12,62 +11,51 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-text">
-        <div class="hero-badges">
-          <span class="badge badge-gold">⭐ Trusted Since 2020</span>
-          <span class="badge">✓ All 64 Louisiana Parishes</span>
-          <span class="badge">💰 Cash in 7 Days</span>
-        </div>
+        <div class="hero-eyebrow">⭐ Family-Owned &amp; Operated Since 2020</div>
         <h1>Need to Sell Your House <em>Fast</em> in Louisiana?</h1>
-        <p>Armstrong Buys Houses — we make it simple. Get a fair, no-obligation cash offer within 24 hours. No repairs, no fees, no commissions. Close on YOUR schedule.</p>
-        <div class="hero-stats">
-          <div class="stat-card">
-            <span class="num">300+</span>
-            <span class="label">Homes Purchased</span>
-          </div>
-          <div class="stat-card">
-            <span class="num">24hr</span>
-            <span class="label">Cash Offer</span>
-          </div>
-          <div class="stat-card">
-            <span class="num">64</span>
-            <span class="label">Parishes Served</span>
-          </div>
+        <p>We make it simple. Get a fair, no-obligation cash offer within 24 hours. No repairs, no fees, no commissions. Close on your schedule — as fast as 7 days.</p>
+        <div class="trust-pills">
+          <span class="trust-pill"><span class="dot">✓</span> All 64 Parishes</span>
+          <span class="trust-pill"><span class="dot">✓</span> Cash in 24 Hours</span>
+          <span class="trust-pill"><span class="dot">✓</span> Close in 7 Days</span>
+          <span class="trust-pill"><span class="dot">✓</span> Zero Fees Ever</span>
+        </div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="/how-it-works" class="btn-outline-white">How It Works</a>
+          <a href="tel:+13372700518" class="btn-outline-white">📞 (337) 270-0518</a>
         </div>
       </div>
+
+      <!-- FORM -->
       <div class="offer-card">
         <h3>Get Your Free Cash Offer</h3>
-        <p class="sub">No obligation — respond within 24 hours</p>
-        <form class="offer-form" id="heroForm" action="https://formspree.io/f/xbdejkar" method="POST">
+        <p class="sub">No obligation — we respond within 24 hours</p>
+        <form class="offer-form" action="https://formspree.io/f/xbdejkar" method="POST">
           <div class="form-group">
-            <label>Property Address *</label>
-            <input type="text" name="address" placeholder="123 Main St, New Orleans, LA" required />
+            <input type="text" name="address" placeholder="Property Address *" required />
           </div>
           <div class="form-group">
-            <label>Your Name *</label>
-            <input type="text" name="name" placeholder="John Smith" required />
+            <input type="text" name="name" placeholder="Your Full Name *" required />
           </div>
           <div class="form-group">
-            <label>Phone Number *</label>
-            <input type="tel" name="phone" placeholder="(337) 270-0518" required />
+            <input type="tel" name="phone" placeholder="Phone Number *" required />
           </div>
           <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" name="email" placeholder="john@example.com" />
+            <input type="email" name="email" placeholder="Email Address" />
           </div>
           <div class="form-group">
-            <label>Property Condition</label>
             <select name="condition">
-              <option value="">Select condition...</option>
+              <option value="">Property Condition</option>
               <option>Excellent — Move-in ready</option>
               <option>Good — Minor repairs needed</option>
               <option>Fair — Some repairs needed</option>
-              <option>Poor — Major repairs/renovations</option>
+              <option>Poor — Major repairs needed</option>
               <option>Very Poor — Significant damage</option>
             </select>
           </div>
-          <button type="submit" class="btn-primary">💰 Get My Cash Offer →</button>
-          <div class="success-msg">✅ Thank you! We'll contact you within 24 hours with your cash offer.</div>
-          <p class="form-disclaimer">By submitting, you agree to receive calls, texts, and emails from Armstrong Buys Houses. We respect your privacy and will never sell your information. Msg &amp; data rates may apply.</p>
+          <button type="submit" class="btn-primary">Get My Cash Offer →</button>
+          <div class="success-msg">✅ Thank you! We'll contact you within 24 hours.</div>
+          <p class="form-disclaimer">By submitting, you agree to receive communications from Armstrong Buys Houses. We never sell your information.</p>
         </form>
       </div>
     </div>
@@ -80,9 +68,9 @@
     <div class="trust-items">
       <div class="trust-item"><span class="icon">✓</span> No Repairs Needed</div>
       <div class="trust-item"><span class="icon">✓</span> No Agent Commissions</div>
-      <div class="trust-item"><span class="icon">✓</span> No Closing Costs</div>
+      <div class="trust-item"><span class="icon">✓</span> We Pay Closing Costs</div>
       <div class="trust-item"><span class="icon">✓</span> Close in 7–14 Days</div>
-      <div class="trust-item"><span class="icon">✓</span> Any Condition Accepted</div>
+      <div class="trust-item"><span class="icon">✓</span> Any Condition</div>
       <div class="trust-item"><span class="icon">✓</span> Cash Offer in 24 Hours</div>
     </div>
   </div>
@@ -94,38 +82,38 @@
     <div class="section-header">
       <span class="eyebrow">Simple Process</span>
       <h2>How It Works</h2>
-      <p>Selling your Louisiana home for cash has never been easier. Three simple steps and you're done.</p>
+      <p>Three steps and you're done. No hassle, no surprises — just cash in your hand.</p>
     </div>
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-num">1</div>
         <h3>Submit Your Property</h3>
-        <p>Fill out our quick form with your property details or give us a call. We review every submission personally and reach out fast.</p>
+        <p>Fill out our quick form or call us. We review every submission personally and get back to you fast.</p>
       </div>
       <div class="step-card">
         <div class="step-num">2</div>
-        <h3>Receive Your Cash Offer</h3>
-        <p>Within 24 hours, you'll receive a fair, competitive cash offer — no hidden fees, no commissions, no obligations whatsoever.</p>
+        <h3>Get Your Cash Offer</h3>
+        <p>Within 24 hours you'll receive a fair, no-obligation cash offer. No fees, no commissions, no pressure.</p>
       </div>
       <div class="step-card">
         <div class="step-num">3</div>
         <h3>Close &amp; Get Paid</h3>
-        <p>Choose your closing date. We handle all the paperwork. You walk away with cash in hand — as fast as 7 days from today.</p>
+        <p>Choose your closing date. We handle all the paperwork. Walk away with cash — as fast as 7 days.</p>
       </div>
     </div>
-    <div style="text-align:center; margin-top:40px;">
-      <a href="/how-it-works" class="btn-secondary">Learn More About Our Process</a>
+    <div style="text-align:center; margin-top:36px;">
+      <a href="/how-it-works" class="btn-secondary">Learn More →</a>
     </div>
   </div>
 </section>
 
-<!-- WHY CHOOSE US vs. TRADITIONAL -->
+<!-- COMPARISON -->
 <section class="section section-alt">
   <div class="container">
     <div class="section-header">
       <span class="eyebrow">Compare Your Options</span>
-      <h2>Armstrong Buys Houses vs. Traditional Sale</h2>
-      <p>See why hundreds of Louisiana homeowners choose us over listing with a real estate agent.</p>
+      <h2>Armstrong vs. Traditional Sale</h2>
+      <p>See why Louisiana homeowners choose us over listing with an agent.</p>
     </div>
     <div style="overflow-x:auto;">
       <table class="comparison-table">
@@ -138,60 +126,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><strong>Time to Receive Offer</strong></td>
-            <td class="check">Within 24 Hours ✓</td>
-            <td class="cross">Weeks to Months ✗</td>
-            <td class="maybe">Varies ~</td>
-          </tr>
-          <tr>
-            <td><strong>Closing Timeline</strong></td>
-            <td class="check">7–14 Days ✓</td>
-            <td class="cross">30–90 Days ✗</td>
-            <td class="maybe">30–60 Days ~</td>
-          </tr>
-          <tr>
-            <td><strong>Commission Fees</strong></td>
-            <td class="check">ZERO ✓</td>
-            <td class="cross">5–6% ✗</td>
-            <td class="check">None ✓</td>
-          </tr>
-          <tr>
-            <td><strong>Closing Costs</strong></td>
-            <td class="check">We Pay All ✓</td>
-            <td class="cross">1–3% ✗</td>
-            <td class="cross">Varies ✗</td>
-          </tr>
-          <tr>
-            <td><strong>Repairs Required</strong></td>
-            <td class="check">None — As-Is ✓</td>
-            <td class="cross">Usually Required ✗</td>
-            <td class="cross">Usually Required ✗</td>
-          </tr>
-          <tr>
-            <td><strong>Home Inspection Contingency</strong></td>
-            <td class="check">No ✓</td>
-            <td class="cross">Yes ✗</td>
-            <td class="cross">Yes ✗</td>
-          </tr>
-          <tr>
-            <td><strong>Financing Contingency</strong></td>
-            <td class="check">No — Cash Buyer ✓</td>
-            <td class="cross">Yes ✗</td>
-            <td class="maybe">Maybe ~</td>
-          </tr>
-          <tr>
-            <td><strong>Showings / Open Houses</strong></td>
-            <td class="check">None ✓</td>
-            <td class="cross">Many Required ✗</td>
-            <td class="cross">Required ✗</td>
-          </tr>
-          <tr>
-            <td><strong>Sale Falls Through Risk</strong></td>
-            <td class="check">Very Low ✓</td>
-            <td class="cross">High (25%+) ✗</td>
-            <td class="cross">High ✗</td>
-          </tr>
+          <tr><td><strong>Time to Offer</strong></td><td class="check">24 Hours ✓</td><td class="cross">Weeks ✗</td><td class="maybe">Varies ~</td></tr>
+          <tr><td><strong>Closing Timeline</strong></td><td class="check">7–14 Days ✓</td><td class="cross">30–90 Days ✗</td><td class="maybe">30–60 Days ~</td></tr>
+          <tr><td><strong>Commissions</strong></td><td class="check">Zero ✓</td><td class="cross">5–6% ✗</td><td class="check">None ✓</td></tr>
+          <tr><td><strong>Closing Costs</strong></td><td class="check">We Pay All ✓</td><td class="cross">1–3% ✗</td><td class="cross">Varies ✗</td></tr>
+          <tr><td><strong>Repairs Required</strong></td><td class="check">None — As-Is ✓</td><td class="cross">Usually Required ✗</td><td class="cross">Usually Required ✗</td></tr>
+          <tr><td><strong>Financing Contingency</strong></td><td class="check">No — Cash ✓</td><td class="cross">Yes ✗</td><td class="maybe">Maybe ~</td></tr>
+          <tr><td><strong>Showings Required</strong></td><td class="check">None ✓</td><td class="cross">Many ✗</td><td class="cross">Required ✗</td></tr>
         </tbody>
       </table>
     </div>
@@ -202,56 +143,17 @@
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow">Why Choose Armstrong</span>
-      <h2>We Buy Louisiana Homes in Any Situation</h2>
+      <span class="eyebrow">Any Situation</span>
+      <h2>We Buy in Any Situation</h2>
       <p>No matter why you need to sell, we have a solution that works for you.</p>
     </div>
     <div class="reasons-grid">
-      <div class="reason-card" id="foreclosure">
-        <div class="reason-icon">🏚️</div>
-        <h3>Facing Foreclosure</h3>
-        <p>Stop foreclosure before it ruins your credit. We can close quickly and help you walk away with cash.</p>
-      </div>
-      <div class="reason-card" id="divorce">
-        <div class="reason-icon">⚖️</div>
-        <h3>Going Through Divorce</h3>
-        <p>Divide your assets cleanly and quickly. We make the process simple so you can move forward with your life.</p>
-      </div>
-      <div class="reason-card" id="inherited">
-        <div class="reason-icon">🏛️</div>
-        <h3>Inherited Property</h3>
-        <p>Don't let an inherited home become a burden. We handle probate situations and buy in any condition.</p>
-      </div>
-      <div class="reason-card" id="repairs">
-        <div class="reason-icon">🔨</div>
-        <h3>Needs Major Repairs</h3>
-        <p>Roof damage, foundation issues, fire damage — we buy it as-is. No repair costs, no contractor headaches.</p>
-      </div>
-      <div class="reason-card" id="behind">
-        <div class="reason-icon">💳</div>
-        <h3>Behind on Payments</h3>
-        <p>If you're behind on mortgage payments, we can help you avoid foreclosure and protect your financial future.</p>
-      </div>
-      <div class="reason-card" id="relocation">
-        <div class="reason-icon">✈️</div>
-        <h3>Job Relocation</h3>
-        <p>Moving for a new job? We'll buy your home fast so you don't have to manage a long-distance sale.</p>
-      </div>
-      <div class="reason-card" id="rental">
-        <div class="reason-icon">🏠</div>
-        <h3>Difficult Rental Property</h3>
-        <p>Tired of problem tenants, late rent, or vacant properties? We buy rental homes with tenants in place.</p>
-      </div>
-      <div class="reason-card" id="downsizing">
-        <div class="reason-icon">📦</div>
-        <h3>Downsizing</h3>
-        <p>Ready to simplify? Sell your larger home quickly and move into the next chapter of your life stress-free.</p>
-      </div>
-      <div class="reason-card">
-        <div class="reason-icon">🌪️</div>
-        <h3>Storm / Flood Damage</h3>
-        <p>Louisiana storm damage? We buy hurricane, flood, and weather-damaged homes in any parish — as-is.</p>
-      </div>
+      <div class="reason-card"><div class="reason-icon">🏚️</div><h3>Facing Foreclosure</h3><p>Stop foreclosure before it damages your credit. We can close quickly and help you walk away with cash.</p></div>
+      <div class="reason-card"><div class="reason-icon">⚖️</div><h3>Divorce</h3><p>Divide assets cleanly and quickly. One sale, cash in hand, and you can both move forward.</p></div>
+      <div class="reason-card"><div class="reason-icon">📜</div><h3>Inherited Property</h3><p>Don't let an inherited home become a burden. We handle probate situations and buy as-is.</p></div>
+      <div class="reason-card"><div class="reason-icon">🔨</div><h3>Needs Major Repairs</h3><p>Roof damage, foundation issues, fire damage — we buy it as-is, no repair costs required.</p></div>
+      <div class="reason-card"><div class="reason-icon">🌪️</div><h3>Storm / Flood Damage</h3><p>Louisiana weather is tough. We buy hurricane and flood-damaged homes in any condition.</p></div>
+      <div class="reason-card"><div class="reason-icon">✈️</div><h3>Relocating Fast</h3><p>Moving for a new job? We'll buy your home fast so you don't manage a long-distance sale.</p></div>
     </div>
   </div>
 </section>
@@ -262,41 +164,40 @@
     <div class="section-header">
       <span class="eyebrow">Real Reviews</span>
       <h2>What Louisiana Homeowners Say</h2>
-      <p>Don't take our word for it — hear from real homeowners across Louisiana.</p>
     </div>
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Armstrong Buys Houses made selling my New Orleans home so incredibly easy. I got a fair cash offer within hours and closed in 10 days. No repairs, no showings — just cash in my account!"</p>
+        <p class="testimonial-text">"Armstrong made selling my New Orleans home so easy. Cash offer in hours, closed in 10 days. No repairs, no showings — just cash in my account!"</p>
         <div class="reviewer">Marcus T.</div>
         <div class="reviewer-location">New Orleans, Orleans Parish</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"I was facing foreclosure and didn't know what to do. Armstrong stepped in, gave me a cash offer the same day I called, and we closed before the bank could foreclose. They literally saved me."</p>
+        <p class="testimonial-text">"I was facing foreclosure and didn't know what to do. Armstrong gave me a cash offer the same day I called and we closed before the bank could foreclose. They saved me."</p>
         <div class="reviewer">Denise R.</div>
         <div class="reviewer-location">Baton Rouge, East Baton Rouge Parish</div>
       </div>
       <div class="testimonial-card">
         <div class="stars">★★★★★</div>
-        <p class="testimonial-text">"Inherited my grandmother's house in Shreveport — it needed a lot of work. Armstrong bought it as-is for a price I was happy with. The whole process took less than 2 weeks. Highly recommend!"</p>
+        <p class="testimonial-text">"Inherited my grandmother's house in Shreveport — it needed a lot of work. Armstrong bought it as-is for a fair price. The whole process took less than 2 weeks."</p>
         <div class="reviewer">James L.</div>
         <div class="reviewer-location">Shreveport, Caddo Parish</div>
       </div>
     </div>
-    <div style="text-align:center; margin-top:40px;">
-      <a href="/reviews" class="btn-secondary">Read All Reviews</a>
+    <div style="text-align:center; margin-top:36px;">
+      <a href="/reviews" class="btn-secondary">Read All Reviews →</a>
     </div>
   </div>
 </section>
 
-<!-- ALL PARISHES -->
+<!-- PARISHES -->
 <section class="section">
   <div class="container">
     <div class="section-header">
       <span class="eyebrow">Statewide Coverage</span>
-      <h2>We Buy Houses in All 64 Louisiana Parishes</h2>
-      <p>From the bayous to the city — wherever your property is in Louisiana, we'll make you a cash offer.</p>
+      <h2>We Buy in All 64 Louisiana Parishes</h2>
+      <p>Wherever your property is in Louisiana, we'll make you a cash offer.</p>
     </div>
     <div class="parishes-grid">
       {% for parish in parishes %}
@@ -306,35 +207,31 @@
   </div>
 </section>
 
-<!-- FAQ SNIPPET -->
+<!-- FAQ -->
 <section class="section section-alt">
   <div class="container-sm">
     <div class="section-header">
-      <span class="eyebrow">Frequently Asked</span>
+      <span class="eyebrow">FAQ</span>
       <h2>Common Questions</h2>
     </div>
     <div class="faq-item">
-      <div class="faq-question">How fast can you close on my Louisiana house? <span class="faq-toggle">+</span></div>
-      <div class="faq-answer">We can close in as few as 7 days, or on whatever timeline works best for you. Unlike traditional buyers, we use cash — no financing delays, no waiting on banks. You pick the date.</div>
+      <div class="faq-question">How fast can you close? <span class="faq-toggle">+</span></div>
+      <div class="faq-answer">We can close in as few as 7 days, or on whatever timeline works for you. We use cash — no bank financing delays. You pick the date.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-question">Do I need to make repairs before selling? <span class="faq-toggle">+</span></div>
-      <div class="faq-answer">Absolutely not. We buy houses in any condition — foundation issues, roof damage, flood damage, fire damage, outdated kitchens, you name it. We handle all repairs after purchase so you don't have to spend a dime.</div>
+      <div class="faq-question">Do I need to make repairs? <span class="faq-toggle">+</span></div>
+      <div class="faq-answer">Not at all. We buy in any condition — foundation issues, roof damage, flood damage, fire damage, outdated kitchens. We handle everything after closing.</div>
     </div>
     <div class="faq-item">
       <div class="faq-question">Are there any fees or commissions? <span class="faq-toggle">+</span></div>
-      <div class="faq-answer">Zero. We pay all closing costs. There are no real estate agent commissions, no hidden fees, and no surprise deductions from your offer. The cash offer we make is what you receive.</div>
+      <div class="faq-answer">Zero. We pay all closing costs. No real estate agent commissions, no hidden fees. The cash offer we make is exactly what you receive.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-question">How do you determine your cash offer price? <span class="faq-toggle">+</span></div>
-      <div class="faq-answer">We consider the property's location, current condition, recent comparable sales in your area, and the cost of any needed repairs. We always aim to give you the highest fair price we can while making the investment work for us.</div>
+      <div class="faq-question">Do you buy in all Louisiana parishes? <span class="faq-toggle">+</span></div>
+      <div class="faq-answer">Yes — all 64 Louisiana parishes. From New Orleans and Baton Rouge to Shreveport, Lake Charles, Lafayette, DeRidder, Leesville, and everywhere in between.</div>
     </div>
-    <div class="faq-item">
-      <div class="faq-question">Do you buy houses in all Louisiana parishes? <span class="faq-toggle">+</span></div>
-      <div class="faq-answer">Yes! We buy in all 64 Louisiana parishes — from New Orleans and Baton Rouge to Shreveport, Lake Charles, Lafayette, Monroe, and every rural parish in between. If it's in Louisiana, we're interested.</div>
-    </div>
-    <div style="text-align:center; margin-top:32px;">
-      <a href="/faq" class="btn-secondary">View All FAQs</a>
+    <div style="text-align:center; margin-top:28px;">
+      <a href="/faq" class="btn-secondary">View All FAQs →</a>
     </div>
   </div>
 </section>
