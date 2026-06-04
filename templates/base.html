@@ -99,27 +99,18 @@
       padding: 0 24px;
       max-width: 1160px;
       margin: 0 auto;
-      height: 68px;
+      height: 80px;
     }
     .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      font-weight: 900;
-      color: var(--navy);
       display: flex;
       align-items: center;
-      gap: 10px;
       text-decoration: none;
+      flex-shrink: 0;
     }
-    .logo-icon {
-      width: 38px; height: 38px;
-      background: var(--navy);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--cyan);
-      font-size: 18px;
+    .logo img {
+      height: 64px;
+      width: auto;
     }
-    .logo span { color: var(--blue); }
 
     .nav-links {
       display: flex;
@@ -539,7 +530,7 @@
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .mobile-toggle { display: block; }
-      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: #fff; border-top: 1px solid var(--border); padding: 16px; box-shadow: var(--shadow-lg); }
+      .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background: #fff; border-top: 1px solid var(--border); padding: 16px; box-shadow: var(--shadow-lg); }
       .hero-grid { grid-template-columns: 1fr; }
       .steps-grid { grid-template-columns: 1fr; }
       .reasons-grid { grid-template-columns: 1fr 1fr; }
@@ -568,9 +559,8 @@
   <!-- Nav -->
   <nav>
     <div class="nav-inner">
-      <a href="/" class="logo"><img src="/static/images/logo_white.png" alt="Armstrong Buys Houses" style="height:70px;width:auto;">
-        <div class="logo-icon">🏠</div>
-        Armstrong<span>Buys</span>Houses
+      <a href="/" class="logo">
+        <img src="/static/images/logo_white.png" alt="Armstrong Buys Houses" />
       </a>
       <button class="mobile-toggle" onclick="toggleNav()" aria-label="Menu">☰</button>
       <ul class="nav-links" id="navLinks">
@@ -613,9 +603,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo" style="color:#fff;">
-            <div class="logo-icon">🏠</div>
-            Armstrong<span style="color:var(--cyan);">Buys</span>Houses
+          <a href="/" class="logo">
+            <img src="/static/images/logo_white.png" alt="Armstrong Buys Houses" style="height:48px;width:auto;filter:brightness(0) invert(1);" />
           </a>
           <p>Louisiana's family-owned cash home buyer. We buy in all 64 parishes — fast, fair, and hassle-free since 2020.</p>
           <a href="tel:+13372700518" class="phone-cta">📞 (337) 270-0518</a>
