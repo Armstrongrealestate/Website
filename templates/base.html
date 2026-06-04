@@ -889,8 +889,8 @@
             headers: {'Accept': 'application/json'},
             body: new FormData(form)
           });
-          const data = await res.json();
-          if (data.success) {
+          if (res.ok) {
+          
             form.reset();
             const msg = form.querySelector('.success-msg');
             if (msg) { msg.style.display = 'block'; }
