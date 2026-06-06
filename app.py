@@ -152,6 +152,8 @@ def sitemap():
 def robots():
     txt = "User-agent: *\nAllow: /\nSitemap: https://www.armstrongbuyshouses.com/sitemap.xml"
     return app.response_class(txt, mimetype='text/plain')
-
+@app.route('/blog/sell-my-house-fast-lake-charles')
+def blog_lake_charles():
+    return render_template('blog_lake_charles.html', parishes=LOUISIANA_PARISHES)
 if __name__ == '__main__':
     app.run(debug=True)
