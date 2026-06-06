@@ -155,5 +155,28 @@ def robots():
 @app.route('/blog/sell-my-house-fast-lake-charles')
 def blog_lake_charles():
     return render_template('blog_lake_charles.html', parishes=LOUISIANA_PARISHES)
+@app.route('/blog/sell-my-house-fast-deridder')
+def blog_deridder():
+    return render_template('blog_deridder.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-leesville')
+def blog_leesville():
+    return render_template('blog_leesville.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-sulphur')
+def blog_sulphur():
+    return render_template('blog_sulphur.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-westlake')
+def blog_westlake():
+    return render_template('blog_westlake.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-lafayette')
+def blog_lafayette():
+    return render_template('blog_lafayette.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-baton-rouge')
+def blog_baton_rouge():
+    return render_template('blog_baton_rouge.html', parishes=LOUISIANA_PARISHES)
 if __name__ == '__main__':
     app.run(debug=True)
