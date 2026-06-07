@@ -705,6 +705,9 @@
             const msg = form.querySelector('.success-msg');
             if (msg) { msg.style.display = 'block'; }
             btn.textContent = '✓ Offer Request Sent!';
+
+            // ✅ Google Ads conversion tracking
+            gtag('event', 'ads_conversion_Contact_Us_1');
           } else {
             throw new Error('failed');
           }
