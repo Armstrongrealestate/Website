@@ -3,6 +3,132 @@
 {% block meta_desc %}Learn about Armstrong Buys Houses — Louisiana's trusted cash home buyer. We've helped 100+ homeowners sell fast with zero fees across all 64 parishes since 2020.{% endblock %}
 {% block canonical %}/about{% endblock %}
 
+{% block head %}
+<style>
+  /* ===== ABOUT PAGE MOBILE FIXES ===== */
+
+  .about-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .about-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .about-stats-grid .stat-box {
+    text-align: center;
+    padding: 32px 20px;
+    border-radius: 16px;
+  }
+
+  .stat-box .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    display: block;
+  }
+
+  .stat-box .stat-label {
+    font-size: 14px;
+  }
+
+  .stat-navy { background: var(--navy); }
+  .stat-navy .stat-num { color: #fff; }
+  .stat-navy .stat-label { color: rgba(255,255,255,0.85); }
+
+  .stat-light { background: var(--off-white); border: 1px solid var(--border); }
+  .stat-light .stat-num { color: var(--navy); }
+  .stat-light .stat-label { color: var(--text-mid); }
+
+  .stat-blue { background: var(--blue); }
+  .stat-blue .stat-num { color: #fff; }
+  .stat-blue .stat-label { color: rgba(255,255,255,0.9); }
+
+  .about-aaron-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .about-aaron-photo {
+    text-align: center;
+  }
+
+  .about-aaron-photo img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 20px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+  }
+
+  .about-aaron-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 20px;
+  }
+
+  .about-aaron-title {
+    color: var(--blue);
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  .about-h2 {
+    font-size: 36px;
+    margin: 12px 0 20px;
+  }
+
+  .about-p {
+    color: var(--text-mid);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .about-story-grid {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .about-aaron-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    /* Move photo below the text on mobile */
+    .about-aaron-photo {
+      order: -1;
+    }
+
+    .about-h2 {
+      font-size: 26px;
+    }
+
+    .stat-box .stat-num {
+      font-size: 36px;
+    }
+
+    .about-stats-grid {
+      gap: 12px;
+    }
+
+    .about-p {
+      font-size: 15px;
+    }
+  }
+</style>
+{% endblock %}
+
 {% block content %}
 <section class="page-header">
   <div class="container">
@@ -13,36 +139,36 @@
 
 <section class="section">
   <div class="container">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+    <div class="about-story-grid">
       <div>
-        <span class="eyebrow" style="font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:2px;">Our Story</span>
-        <h2 style="font-size:36px; margin:12px 0 20px;">We're Louisiana Locals Who Care</h2>
-        <p style="color:var(--text-mid); font-size:17px; line-height:1.8; margin-bottom:16px;">
+        <span class="eyebrow">Our Story</span>
+        <h2 class="about-h2">We're Louisiana Locals Who Care</h2>
+        <p class="about-p">
           Armstrong Buys Houses was founded with one simple mission: to give Louisiana homeowners a better, faster, fairer way to sell their homes. We saw too many people stuck — unable to sell because of repairs they couldn't afford, agents who didn't deliver, or timelines that didn't work for their lives.
         </p>
-        <p style="color:var(--text-mid); font-size:17px; line-height:1.8; margin-bottom:16px;">
+        <p class="about-p">
           So we built something different. A direct, honest, cash-buying service that puts the homeowner first — no games, no pressure, no hidden costs.
         </p>
-        <p style="color:var(--text-mid); font-size:17px; line-height:1.8;">
+        <p class="about-p">
           Since 2020, we've helped over 100+ Louisiana homeowners sell their homes quickly and walk away with cash in hand. We're proud to be a trusted part of the Louisiana community.
         </p>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
-        <div style="background:var(--navy); text-align:center; padding:32px 20px; border-radius:16px;">
-          <span style="font-family:'Playfair Display',serif; font-size:48px; font-weight:900; color:#fff; display:block;">100+</span>
-          <span style="color:rgba(255,255,255,0.85); font-size:14px;">Homes Purchased</span>
+      <div class="about-stats-grid">
+        <div class="stat-box stat-navy">
+          <span class="stat-num">100+</span>
+          <span class="stat-label">Homes Purchased</span>
         </div>
-        <div style="background:var(--off-white); text-align:center; padding:32px 20px; border-radius:16px; border:1px solid var(--border);">
-          <span style="font-family:'Playfair Display',serif; font-size:48px; font-weight:900; color:var(--navy); display:block;">64</span>
-          <span style="color:var(--text-mid); font-size:14px;">Parishes Served</span>
+        <div class="stat-box stat-light">
+          <span class="stat-num">64</span>
+          <span class="stat-label">Parishes Served</span>
         </div>
-        <div style="background:var(--off-white); text-align:center; padding:32px 20px; border-radius:16px; border:1px solid var(--border);">
-          <span style="font-family:'Playfair Display',serif; font-size:48px; font-weight:900; color:var(--navy); display:block;">5★</span>
-          <span style="color:var(--text-mid); font-size:14px;">Average Rating</span>
+        <div class="stat-box stat-light">
+          <span class="stat-num">5★</span>
+          <span class="stat-label">Average Rating</span>
         </div>
-        <div style="background:var(--blue); text-align:center; padding:32px 20px; border-radius:16px;">
-          <span style="font-family:'Playfair Display',serif; font-size:48px; font-weight:900; color:#fff; display:block;">7</span>
-          <span style="color:rgba(255,255,255,0.9); font-size:14px;">Day Avg. Close</span>
+        <div class="stat-box stat-blue">
+          <span class="stat-num">7</span>
+          <span class="stat-label">Day Avg. Close</span>
         </div>
       </div>
     </div>
@@ -52,25 +178,23 @@
 <!-- Meet Aaron Section -->
 <section class="section" style="background:#fff;">
   <div class="container">
-    <div style="display:grid; grid-template-columns:400px 1fr; gap:64px; align-items:center;">
-      <div style="text-align:center;">
-        <img src="/static/images/aaron_photo.jpg" alt="Aaron Armstrong - Owner of Armstrong Buys Houses" style="width:100%; max-width:380px; border-radius:20px; box-shadow:0 16px 48px rgba(0,0,0,0.15);" />
-        <div style="margin-top:20px;">
-          <div style="font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:var(--navy);">Aaron Armstrong</div>
-          <div style="color:var(--blue); font-size:15px; font-weight:600; margin-top:4px;">Founder & Owner</div>
-          <a href="tel:+13372700518" style="display:inline-flex; align-items:center; gap:8px; margin-top:16px; background:var(--blue); color:#fff; padding:12px 24px; border-radius:8px; font-weight:600; text-decoration:none;">📞 (337) 270-0518</a>
-        </div>
+    <div class="about-aaron-grid">
+      <div class="about-aaron-photo">
+        <img src="/static/images/aaron_photo.jpg" alt="Aaron Armstrong - Owner of Armstrong Buys Houses" />
+        <div class="about-aaron-name">Aaron Armstrong</div>
+        <div class="about-aaron-title">Founder & Owner</div>
+        <a href="tel:+13372700518" style="display:inline-flex; align-items:center; gap:8px; margin-top:16px; background:var(--blue); color:#fff; padding:12px 24px; border-radius:8px; font-weight:600; text-decoration:none;">📞 (337) 270-0518</a>
       </div>
       <div>
-        <span class="eyebrow" style="font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:2px;">Meet The Owner</span>
-        <h2 style="font-size:36px; margin:12px 0 20px;">When You Call Us, You Talk To Me</h2>
-        <p style="color:var(--text-mid); font-size:17px; line-height:1.8; margin-bottom:16px;">
+        <span class="eyebrow">Meet The Owner</span>
+        <h2 class="about-h2">When You Call Us, You Talk To Me</h2>
+        <p class="about-p">
           I'm Aaron Armstrong, a Louisiana native and the founder of Armstrong Buys Houses. I started this company in 2020 with a simple mission — help Louisiana homeowners sell fast without the hassle of repairs, agent fees, or long wait times.
         </p>
-        <p style="color:var(--text-mid); font-size:17px; line-height:1.8; margin-bottom:16px;">
+        <p class="about-p">
           I've personally bought and renovated dozens of properties across southwest Louisiana and I take pride in making every transaction fair, honest, and stress-free. I know this state, I know the markets, and I know what it means to help a family through a tough situation.
         </p>
-        <p style="color:var(--text-mid); font-size:17px; line-height:1.8;">
+        <p class="about-p">
           When you reach out to Armstrong Buys Houses, you're not talking to a call center or a big corporation. You're talking directly to me — a local guy who genuinely wants to help you move forward.
         </p>
       </div>
