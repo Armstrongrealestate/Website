@@ -4,6 +4,105 @@
 {% block meta_desc %}Family-owned cash home buyers in ALL 64 Louisiana parishes. Get a fair cash offer in 24 hours. No repairs, no fees, no commissions. Armstrong Buys Houses — call (337) 270-0518!{% endblock %}
 {% block canonical %}/{% endblock %}
 
+{% block head %}
+<style>
+  /* ===== HOME PAGE MOBILE FIXES ===== */
+  @media (max-width: 900px) {
+
+    /* Hero form shows below text on mobile, full width */
+    .hero {
+      padding: 40px 0 56px;
+    }
+
+    .hero-text h1 {
+      font-size: 28px !important;
+    }
+
+    .hero-text p {
+      font-size: 15px;
+    }
+
+    .trust-pills {
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .trust-pill {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+
+    /* Trust bar — scroll horizontally instead of wrapping messily */
+    .trust-items {
+      justify-content: flex-start;
+      gap: 20px;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      padding-bottom: 4px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .trust-item {
+      white-space: nowrap;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+
+    /* Comparison table — horizontal scroll */
+    .comparison-table th,
+    .comparison-table td {
+      font-size: 12px;
+      padding: 10px 12px;
+    }
+
+    /* Parish grid — 2 columns on mobile */
+    .parishes-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .parish-link {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+
+    /* Steps — already 1 col from base.html, just tighten */
+    .step-card {
+      padding: 28px 20px;
+    }
+
+    /* Reasons grid — 1 col on small mobile */
+    .reasons-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* Testimonials already 1 col */
+    .testimonial-card {
+      padding: 20px;
+    }
+
+    /* Section spacing tighter on mobile */
+    .section {
+      padding: 48px 0;
+    }
+
+    .section-header {
+      margin-bottom: 32px;
+    }
+
+    .section-header h2 {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .parishes-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+{% endblock %}
+
 {% block content %}
 
 <!-- HERO -->
