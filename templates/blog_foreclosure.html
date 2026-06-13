@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+
+{% block title %}How to Stop Foreclosure in Louisiana — Sell Your House Fast for Cash | Armstrong Buys Houses{% endblock %}
+{% block meta_desc %}Facing foreclosure in Louisiana? You may have more options than you think. Learn how to stop foreclosure by selling fast for cash. Armstrong Buys Houses closes in 7 days. Call (337) 270-0518.{% endblock %}
+{% block meta_keys %}stop foreclosure Louisiana, sell house before foreclosure Louisiana, foreclosure help Louisiana, avoid foreclosure Louisiana, cash home buyers foreclosure Louisiana, pre-foreclosure Louisiana{% endblock %}
+{% block canonical %}/blog/sell-house-during-foreclosure-louisiana{% endblock %}
+{% block og_url %}/blog/sell-house-during-foreclosure-louisiana{% endblock %}
+{% block og_title %}How to Stop Foreclosure in Louisiana — Sell Fast for Cash{% endblock %}
+{% block og_desc %}Behind on payments and facing foreclosure in Louisiana? Selling for cash may be your fastest way out. Learn your options and act before it's too late.{% endblock %}
+
+{% block head %}
+<style>
+  .blog-hero { background: #7b1a1a; padding: 60px 0 48px; text-align: center; position: relative; overflow: hidden; }
+  .blog-hero::after { content: ''; position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: linear-gradient(135deg, transparent, rgba(0,0,0,0.2)); pointer-events: none; }
+  .blog-hero .eyebrow { color: #fca5a5; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 14px; position: relative; z-index: 1; }
+  .blog-hero h1 { color: #fff; font-size: clamp(26px, 4vw, 46px); max-width: 820px; margin: 0 auto 16px; line-height: 1.15; position: relative; z-index: 1; }
+  .blog-hero .meta { color: rgba(255,255,255,0.65); font-size: 13px; position: relative; z-index: 1; }
+  .urgent-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 7px 18px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 20px; position: relative; z-index: 1; }
+
+  .blog-layout { display: grid; grid-template-columns: 1fr 320px; gap: 48px; padding: 60px 0 80px; align-items: start; }
+  .blog-body h2 { font-size: clamp(20px, 2.5vw, 28px); color: var(--navy); margin: 40px 0 14px; }
+  .blog-body h3 { font-size: 19px; color: var(--navy); margin: 28px 0 10px; }
+  .blog-body p { color: var(--text-mid); font-size: 16px; line-height: 1.85; margin-bottom: 18px; }
+  .blog-body ul, .blog-body ol { color: var(--text-mid); font-size: 16px; line-height: 1.85; margin: 0 0 18px 20px; }
+  .blog-body li { margin-bottom: 8px; }
+  .blog-body a { color: var(--blue); }
+  .blog-body strong { color: var(--text); font-weight: 600; }
+
+  .blog-intro-box { background: #fff5f5; border-left: 4px solid #e53e3e; border-radius: 0 10px 10px 0; padding: 22px 26px; margin-bottom: 32px; font-size: 16px; color: var(--text-mid); line-height: 1.8; }
+
+  .timeline-box {
+    background: var(--off-white); border: 1px solid var(--border);
+    border-radius: 14px; padding: 28px 32px; margin: 28px 0;
+  }
+  .timeline-box h3 { color: var(--navy); font-size: 18px; margin: 0 0 20px; }
+  .timeline-item { display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start; }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .t-dot { width: 12px; height: 12px; border-radius: 50%; background: #e53e3e; flex-shrink: 0; margin-top: 6px; }
+  .t-dot.green { background: #48bb78; }
+  .t-dot.yellow { background: #f6ad55; }
+  .timeline-item div { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+  .timeline-item strong { color: var(--text); display: block; margin-bottom: 2px; }
+
+  .option-cards { display: grid; gap: 16px; margin: 20px 0 32px; }
+  .option-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 24px 28px; box-shadow: var(--shadow); }
+  .option-card .tag { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 3px 10px; border-radius: 100px; margin-bottom: 10px; }
+  .option-card .tag.red { background: #fed7d7; color: #c53030; }
+  .option-card .tag.yellow { background: #fefcbf; color: #744210; }
+  .option-card .tag.green { background: #c6f6d5; color: #22543d; }
+  .option-card h3 { font-size: 18px; color: var(--navy); margin: 0 0 8px; }
+  .option-card p { font-size: 14px; color: var(--text-mid); margin: 0; line-height: 1.7; }
+
+  .warning-box { background: #fff5f5; border: 1px solid #feb2b2; border-radius: 12px; padding: 24px 28px; margin: 28px 0; }
+  .warning-box h3 { color: #c53030; font-size: 17px; margin: 0 0 10px; font-family: 'DM Sans', sans-serif; font-weight: 700; }
+  .warning-box p { font-size: 15px; color: var(--text-mid); margin: 0; line-height: 1.7; }
+
+  .highlight-box { background: var(--navy); color: #fff; border-radius: 14px; padding: 32px; margin: 36px 0; text-align: center; }
+  .highlight-box h3 { color: var(--cyan); font-size: 22px; margin-bottom: 10px; }
+  .highlight-box p { color: rgba(255,255,255,0.8); font-size: 15px; margin-bottom: 20px; }
+
+  .step-list { list-style: none; margin: 0 0 28px; padding: 0; counter-reset: steps; }
+  .step-list li { counter-increment: steps; display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start; }
+  .step-list li::before { content: counter(steps); background: var(--navy); color: var(--cyan); width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+  .step-list li div { font-size: 15px; color: var(--text-mid); line-height: 1.7; }
+  .step-list li strong { color: var(--text); display: block; margin-bottom: 3px; }
+
+  .faq-section { margin-top: 48px; }
+
+  .blog-sidebar { position: sticky; top: 100px; }
+  .sidebar-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 28px; box-shadow: var(--shadow); margin-bottom: 20px; }
+  .sidebar-card h4 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--navy); margin-bottom: 6px; }
+  .sidebar-card p { font-size: 14px; color: var(--text-mid); margin-bottom: 18px; line-height: 1.6; }
+  .sidebar-links { list-style: none; margin: 0; padding: 0; }
+  .sidebar-links li { border-bottom: 1px solid var(--border); }
+  .sidebar-links li:last-child { border-bottom: none; }
+  .sidebar-links a { display: block; padding: 10px 0; font-size: 14px; color: var(--blue); font-weight: 500; }
+
+  .urgent-sidebar { background: #7b1a1a; border-radius: 14px; padding: 28px; margin-bottom: 20px; }
+  .urgent-sidebar h4 { color: #fff; font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 8px; }
+  .urgent-sidebar p { color: rgba(255,255,255,0.75); font-size: 14px; margin-bottom: 18px; line-height: 1.6; }
+
+  @media (max-width: 860px) { .blog-layout { grid-template-columns: 1fr; } .blog-sidebar { position: static; } }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Stop Foreclosure in Louisiana — Sell Your House Fast for Cash",
+  "description": "Facing foreclosure in Louisiana? Learn how selling your house fast for cash can stop the foreclosure process and protect your credit.",
+  "url": "https://www.armstrongbuyshouses.com/blog/sell-house-during-foreclosure-louisiana",
+  "datePublished": "2026-06-13",
+  "author": {"@type": "Organization", "name": "Armstrong Buys Houses"},
+  "publisher": {"@type": "Organization", "name": "Armstrong Buys Houses", "url": "https://www.armstrongbuyshouses.com"}
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="blog-hero">
+  <div class="container">
+    <span class="eyebrow">Armstrong Buys Houses — Foreclosure Help Louisiana</span>
+    <div class="urgent-pill">⚠️ Time-Sensitive — Act Before the Auction Date</div>
+    <h1>Facing Foreclosure in Louisiana?<br>You Still Have Options.</h1>
+    <p class="meta">Published June 13, 2026 &nbsp;·&nbsp; 9 min read &nbsp;·&nbsp; Foreclosure Help</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="blog-layout">
+    <article class="blog-body">
+
+      <div class="blog-intro-box">
+        If you've missed mortgage payments and your lender has started the foreclosure process, the clock is ticking — but it hasn't run out yet. In Louisiana, you typically have time to act before your home is auctioned. Selling your house fast for cash is often the cleanest way to stop foreclosure, protect your credit, and walk away with money in your pocket instead of nothing.
+      </div>
+
+      <h2>How Foreclosure Works in Louisiana</h2>
+      <p>Louisiana is one of the few states that still uses a <strong>judicial foreclosure process</strong>, which means your lender must file a lawsuit and get a court order before selling your home. This actually works in your favor — it takes longer than non-judicial states, giving you more time to find a solution.</p>
+
+      <div class="timeline-box">
+        <h3>Louisiana Foreclosure Timeline</h3>
+        <div class="timeline-item">
+          <div class="t-dot yellow"></div>
+          <div><strong>30–90 days missed payments</strong>Lender sends notices of default. You may still be able to reinstate the loan by catching up on payments and fees.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="t-dot yellow"></div>
+          <div><strong>90–120 days</strong>Lender files a foreclosure lawsuit (petition) in Louisiana district court. You are formally served.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="t-dot red"></div>
+          <div><strong>120–180 days</strong>Court proceedings. If no defense or resolution, a judgment of foreclosure is entered.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="t-dot red"></div>
+          <div><strong>Post-judgment</strong>Sheriff's sale (auction) is scheduled — typically 30–60 days after judgment. Once the property sells at auction, it's gone.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="t-dot green"></div>
+          <div><strong>At any point before the auction</strong>You can sell the property, pay off the loan, and stop the foreclosure. This is your window.</div>
+        </div>
+      </div>
+
+      <h2>Your Options When Facing Foreclosure</h2>
+
+      <div class="option-cards">
+        <div class="option-card">
+          <span class="tag yellow">Option 1</span>
+          <h3>Loan Reinstatement</h3>
+          <p>Pay all missed payments, late fees, attorney fees, and costs to bring the loan current. This stops foreclosure immediately — but requires coming up with a large lump sum that many homeowners simply don't have.</p>
+        </div>
+        <div class="option-card">
+          <span class="tag yellow">Option 2</span>
+          <h3>Loan Modification or Forbearance</h3>
+          <p>Negotiate with your lender to modify your loan terms or temporarily pause payments. This takes time and approval is not guaranteed. Works best in early stages before a lawsuit is filed.</p>
+        </div>
+        <div class="option-card">
+          <span class="tag red">Option 3</span>
+          <h3>Do Nothing — Let It Foreclose</h3>
+          <p>The foreclosure goes through, your home sells at auction (usually far below market value), and you walk away with nothing — plus a foreclosure on your credit record for 7 years that affects your ability to rent, borrow, or buy another home.</p>
+        </div>
+        <div class="option-card">
+          <span class="tag green">Option 4 — Most Recommended</span>
+          <h3>Sell Fast for Cash Before the Auction</h3>
+          <p>Sell the property to a cash buyer before the auction date. Your mortgage gets paid off at closing, the foreclosure is stopped, and you walk away with whatever equity remains — plus a voluntary sale (not a foreclosure) on your record, which is far less damaging to your credit.</p>
+        </div>
+      </div>
+
+      <h2>Why Selling for Cash Beats Foreclosure</h2>
+      <p>Most homeowners in foreclosure don't realize that a voluntary sale — even a fast cash sale below full market value — is dramatically better than letting the bank take the house. Here's why:</p>
+      <ul>
+        <li><strong>You may walk away with cash</strong> — if you have equity, you receive the difference after the mortgage payoff. In a foreclosure auction, that equity often evaporates</li>
+        <li><strong>Less credit damage</strong> — a foreclosure stays on your credit for 7 years and can drop your score by 100–150 points. A short sale or cash sale is treated far less harshly</li>
+        <li><strong>No deficiency judgment risk</strong> — in some Louisiana foreclosures, the lender can sue you for the difference if the auction price doesn't cover the loan. A negotiated sale eliminates this</li>
+        <li><strong>You control the timeline</strong> — rather than being evicted after an auction, you negotiate a move-out date that works for you</li>
+        <li><strong>It's over fast</strong> — close in 7 days and put the entire situation behind you</li>
+      </ul>
+
+      <div class="warning-box">
+        <h3>⚠️ Don't Wait Until the Auction Is Scheduled</h3>
+        <p>Once a sheriff's sale date is set in Louisiana, you have very little time to stop it. The sooner you act, the more options you have. If you're even 30 days behind on payments and worried about foreclosure, call us now — not after you've received the lawsuit.</p>
+      </div>
+
+      <h2>How Armstrong Buys Houses Helps Foreclosure Situations</h2>
+      <p>We work with homeowners in all stages of the foreclosure process — from the first missed payment all the way to days before the sheriff's sale. We've helped Louisiana homeowners in exactly your situation across all 64 parishes.</p>
+      <p>Here's what we do differently:</p>
+      <ul>
+        <li>We move fast — cash offer in 24 hours, close in as little as 7 days</li>
+        <li>We coordinate directly with your lender's loss mitigation department when needed</li>
+        <li>We handle all paperwork and closing logistics — you just show up and sign</li>
+        <li>We can sometimes negotiate with the lender to accept a short payoff if you owe more than the home is worth</li>
+        <li>We treat every homeowner with dignity — no judgment, no pressure</li>
+      </ul>
+
+      <h2>What Happens at Closing</h2>
+      <ol class="step-list">
+        <li><div><strong>You contact us</strong>Call, text, or fill out the form. Tell us where the foreclosure stands — how many payments behind, whether a lawsuit has been filed, and the auction date if you know it.</div></li>
+        <li><div><strong>We make a cash offer in 24 hours</strong>Based on your home's value and what's owed, we'll present a fair offer. We'll be upfront about what you'll receive after the mortgage payoff.</div></li>
+        <li><div><strong>We contact your lender</strong>We work with the lender to halt the foreclosure proceedings while we close the transaction.</div></li>
+        <li><div><strong>We close fast</strong>Title company handles the payoff to your lender. You receive any remaining proceeds. The foreclosure is stopped permanently.</div></li>
+      </ol>
+
+      <div class="highlight-box">
+        <h3>Don't Let the Bank Take Your Home</h3>
+        <p>Call or text us today. We can often make a cash offer within hours and close before your auction date. All 64 Louisiana parishes.</p>
+        <a href="tel:+13372700518" style="display:inline-flex;align-items:center;gap:8px;background:var(--cyan);color:var(--navy);padding:13px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;margin-right:12px;">📞 Call (337) 270-0518</a>
+        <a href="/cash-offer" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--navy);padding:13px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;">Get My Cash Offer</a>
+      </div>
+
+      <h2>What If I Owe More Than the Home Is Worth?</h2>
+      <p>This is called being "underwater" on your mortgage, and it's more common than you think — especially on homes in Louisiana that have lost value due to storm damage, deferred maintenance, or market shifts. If you owe more than the home is worth, a traditional sale won't cover your loan balance.</p>
+      <p>In these cases, we can explore a <strong>short sale</strong> — where the lender agrees to accept less than the full payoff amount in exchange for a clean settlement. We have experience negotiating short sales with Louisiana lenders and can help navigate this process.</p>
+      <p>A short sale is not ideal, but it's significantly better than foreclosure for your credit and financial future.</p>
+
+      <h2>Frequently Asked Questions — Foreclosure in Louisiana</h2>
+      <div class="faq-section">
+        <div class="faq-item">
+          <div class="faq-question">How long does foreclosure take in Louisiana? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">Louisiana's judicial foreclosure process typically takes 6–18 months from first missed payment to sheriff's sale, depending on court backlogs and whether you contest the lawsuit. This gives you meaningful time to sell if you act early.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I sell my house after foreclosure proceedings have started? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">Yes — in Louisiana you can sell your home at any point before the sheriff's sale auction, even after a lawsuit has been filed and a judgment entered. The sale pays off the loan and stops the foreclosure.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Will I get any money if I sell during foreclosure? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">It depends on how much equity you have versus what you owe. If the sale price exceeds your mortgage balance plus any liens, you receive the difference at closing. We'll walk you through the numbers honestly before you decide.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What if I have a second mortgage or liens on the property? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">Liens, second mortgages, tax liens, and judgment liens all get paid at closing from the sale proceeds — in order of priority. We work with the title company to make sure this is handled correctly.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How does foreclosure affect my credit compared to a cash sale? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">A completed foreclosure typically drops your credit score 100–150 points and stays on your report for 7 years. A voluntary sale — even a short sale — is recorded differently and has significantly less long-term impact. Many people can qualify for a new mortgage within 2–3 years after a short sale versus 7 years after foreclosure.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do you buy houses in all Louisiana parishes? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">Yes — all 64 parishes. From New Orleans to Shreveport, Lake Charles to Alexandria, and every rural parish in between. If you're in Louisiana, we can help.</div>
+        </div>
+      </div>
+
+      <h2>The Bottom Line</h2>
+      <p>Foreclosure feels like the end of the road, but it doesn't have to be. Louisiana's judicial process gives you time — and a cash sale gives you options. The worst thing you can do is nothing.</p>
+      <p>Whether you're one payment behind or weeks away from the sheriff's sale, call us today. We'll tell you honestly what we can do, what you'd walk away with, and how fast we can move. No pressure, no judgment — just a straight answer from a local Louisiana buyer who's helped families in exactly your situation.</p>
+      <p><strong>Call or text Aaron directly at <a href="tel:+13372700518">(337) 270-0518</a> — we answer fast.</strong></p>
+
+    </article>
+
+    <aside class="blog-sidebar">
+      <div class="urgent-sidebar">
+        <h4>⚠️ Facing Foreclosure?</h4>
+        <p>Don't wait. The sooner you call, the more options you have. We can often make an offer within hours.</p>
+        <a href="tel:+13372700518" style="display:block;background:var(--cyan);color:var(--navy);text-align:center;padding:12px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;margin-bottom:10px;">📞 Call (337) 270-0518</a>
+        <a href="/cash-offer" style="display:block;background:rgba(255,255,255,0.1);color:#fff;text-align:center;padding:12px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,0.3);">Get My Cash Offer Online</a>
+      </div>
+
+      <div class="sidebar-card">
+        <h4>Get Your Cash Offer</h4>
+        <p>Facing foreclosure in Louisiana? We respond within hours — not days.</p>
+        <form class="offer-form">
+          <div class="form-group"><input type="text" name="name" placeholder="Your Name" required /></div>
+          <div class="form-group"><input type="tel" name="phone" placeholder="Phone Number" required /></div>
+          <div class="form-group"><input type="text" name="address" placeholder="Property Address" required /></div>
+          <div class="form-group">
+            <select name="foreclosure_stage">
+              <option value="">Foreclosure Stage</option>
+              <option>Behind on payments — no lawsuit yet</option>
+              <option>Lawsuit filed, no judgment yet</option>
+              <option>Judgment entered, no auction date</option>
+              <option>Auction date is set</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <input type="hidden" name="source" value="blog-foreclosure" />
+          <button type="submit" class="btn-primary">Get My Cash Offer →</button>
+          <div class="success-msg">✓ We'll call you within hours!</div>
+          <p class="form-disclaimer">No obligation. 100% confidential. We move fast.</p>
+        </form>
+      </div>
+
+      <div class="sidebar-card">
+        <h4 style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-light);margin-bottom:12px;">Related Articles</h4>
+        <ul class="sidebar-links">
+          <li><a href="/blog/behind-on-mortgage-payments-louisiana">Behind on Payments in Louisiana</a></li>
+          <li><a href="/blog/inherited-property-louisiana">Inherited a House in Louisiana</a></li>
+          <li><a href="/blog/selling-house-during-divorce-louisiana">Selling During Divorce in Louisiana</a></li>
+          <li><a href="/blog/probate-property-louisiana">Probate Property in Louisiana</a></li>
+          <li><a href="/blog/tax-delinquent-property-louisiana">Tax Delinquent Property Louisiana</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+{% endblock %}
