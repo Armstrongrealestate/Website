@@ -1,0 +1,394 @@
+{% extends "base.html" %}
+
+{% block title %}We Buy Partial Interest in Louisiana Properties — 50% Ownership Buyouts | Armstrong Buys Houses{% endblock %}
+
+{% block meta_desc %}Own 50% of a property in Louisiana and need to sell your share? Armstrong Buys Houses buys partial interest and fractional ownership in Louisiana real estate. Get a cash offer today.{% endblock %}
+
+{% block meta_keys %}buy partial interest property Louisiana, sell 50 percent ownership house Louisiana, fractional ownership real estate Louisiana, co-owner buyout Louisiana, sell half interest property Louisiana{% endblock %}
+
+{% block canonical %}/blog/buying-partial-interest-property-louisiana{% endblock %}
+{% block og_url %}/blog/buying-partial-interest-property-louisiana{% endblock %}
+{% block og_title %}We Buy Partial Interest in Louisiana Properties — 50% Ownership Buyouts{% endblock %}
+{% block og_desc %}Own a share of a property in Louisiana and need to cash out? We buy partial interest and fractional ownership in real estate across all 64 parishes.{% endblock %}
+
+{% block head %}
+<style>
+  .blog-hero {
+    background: var(--navy);
+    padding: 60px 0 48px;
+    text-align: center;
+  }
+  .blog-hero .eyebrow { color: var(--cyan); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 14px; }
+  .blog-hero h1 { color: #fff; font-size: clamp(24px, 4vw, 44px); max-width: 820px; margin: 0 auto 16px; line-height: 1.15; }
+  .blog-hero .meta { color: rgba(255,255,255,0.55); font-size: 13px; }
+
+  .blog-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 48px;
+    padding: 60px 0 80px;
+    align-items: start;
+  }
+
+  .blog-body h2 { font-size: clamp(20px, 2.5vw, 28px); color: var(--navy); margin: 40px 0 14px; padding-top: 8px; }
+  .blog-body h3 { font-size: 19px; color: var(--navy); margin: 28px 0 10px; }
+  .blog-body p { color: var(--text-mid); font-size: 16px; line-height: 1.85; margin-bottom: 18px; }
+  .blog-body ul, .blog-body ol { color: var(--text-mid); font-size: 16px; line-height: 1.85; margin: 0 0 18px 20px; }
+  .blog-body li { margin-bottom: 8px; }
+  .blog-body a { color: var(--blue); }
+  .blog-body strong { color: var(--text); font-weight: 600; }
+
+  .blog-intro-box {
+    background: var(--off-white);
+    border-left: 4px solid var(--blue);
+    border-radius: 0 10px 10px 0;
+    padding: 22px 26px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.8;
+  }
+
+  .scenario-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+  .scenario-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .scenario-card h3 { font-size: 17px; color: var(--navy); margin: 0 0 6px; }
+  .scenario-card p { font-size: 14px; color: var(--text-mid); margin: 0; line-height: 1.7; }
+
+  .highlight-box {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 14px;
+    padding: 32px;
+    margin: 36px 0;
+    text-align: center;
+  }
+  .highlight-box h3 { color: var(--cyan); font-size: 22px; margin-bottom: 10px; }
+  .highlight-box p { color: rgba(255,255,255,0.8); font-size: 15px; margin-bottom: 20px; }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .info-box {
+    background: var(--off-white);
+    border-radius: 10px;
+    padding: 20px 22px;
+    border: 1px solid var(--border);
+  }
+  .info-box h4 { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--blue); margin-bottom: 8px; }
+  .info-box p { font-size: 14px; color: var(--text-mid); margin: 0; line-height: 1.7; }
+
+  .step-list { counter-reset: steps; list-style: none; margin: 0 0 28px; padding: 0; }
+  .step-list li {
+    counter-increment: steps;
+    display: flex;
+    gap: 16px;
+    margin-bottom: 18px;
+    align-items: flex-start;
+  }
+  .step-list li::before {
+    content: counter(steps);
+    background: var(--navy);
+    color: var(--cyan);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .step-list li div { font-size: 15px; color: var(--text-mid); line-height: 1.7; }
+  .step-list li strong { color: var(--text); display: block; margin-bottom: 3px; }
+
+  .faq-section { margin-top: 48px; }
+
+  /* Sidebar */
+  .blog-sidebar { position: sticky; top: 100px; }
+  .sidebar-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 28px; box-shadow: var(--shadow); margin-bottom: 20px; }
+  .sidebar-card h4 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--navy); margin-bottom: 6px; }
+  .sidebar-card p { font-size: 14px; color: var(--text-mid); margin-bottom: 18px; line-height: 1.6; }
+  .sidebar-links { list-style: none; margin: 0; padding: 0; }
+  .sidebar-links li { border-bottom: 1px solid var(--border); }
+  .sidebar-links li:last-child { border-bottom: none; }
+  .sidebar-links a { display: block; padding: 10px 0; font-size: 14px; color: var(--blue); font-weight: 500; }
+  .sidebar-links a:hover { color: var(--navy); }
+
+  @media (max-width: 860px) {
+    .blog-layout { grid-template-columns: 1fr; }
+    .blog-sidebar { position: static; }
+    .info-grid { grid-template-columns: 1fr; }
+    .scenario-card { flex-direction: column; gap: 10px; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "We Buy Partial Interest in Louisiana Properties — 50% Ownership Buyouts",
+  "description": "Own 50% of a property in Louisiana and need to sell your share? Armstrong Buys Houses buys partial interest and fractional ownership in Louisiana real estate.",
+  "url": "https://www.armstrongbuyshouses.com/blog/buying-partial-interest-property-louisiana",
+  "datePublished": "2026-06-13",
+  "author": {"@type": "Organization", "name": "Armstrong Buys Houses"},
+  "publisher": {"@type": "Organization", "name": "Armstrong Buys Houses", "url": "https://www.armstrongbuyshouses.com"}
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="blog-hero">
+  <div class="container">
+    <span class="eyebrow">Armstrong Buys Houses — Blog</span>
+    <h1>Own 50% of a Property in Louisiana?<br>We Buy Partial Interest &amp; Fractional Ownership</h1>
+    <p class="meta">Published June 13, 2026 &nbsp;·&nbsp; 7 min read &nbsp;·&nbsp; Partial Interest Buyouts</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="blog-layout">
+
+    <!-- MAIN CONTENT -->
+    <article class="blog-body">
+
+      <div class="blog-intro-box">
+        Most cash buyers won't touch a property unless they're buying 100% of it. Armstrong Buys Houses is different — we buy partial interest in Louisiana properties, including 50/50 ownership situations, inherited shares, and co-ownership disputes. If you own a percentage of a property and need to cash out, we can help.
+      </div>
+
+      <h2>What Is Partial Interest in a Property?</h2>
+      <p>Partial interest — sometimes called fractional ownership or undivided interest — means you legally own a percentage of a property but not the entire thing. In Louisiana, this happens more often than most people realize.</p>
+      <p>Under Louisiana's unique civil law system (rooted in French and Spanish law), property ownership gets divided among heirs in ways that can leave multiple people owning fractional shares of a single home. Add in divorce settlements, business partnerships, or joint purchases gone wrong, and you end up with a lot of co-owned properties where at least one owner wants out.</p>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <h4>Common Ownership Splits</h4>
+          <p>50/50 between two siblings, 33/33/33 between three heirs, 25/75 from a divorce settlement, or any other fractional combination.</p>
+        </div>
+        <div class="info-box">
+          <h4>Louisiana-Specific Rules</h4>
+          <p>Louisiana's forced heirship and community property laws often result in more complex ownership situations than other states — which is why partial interest buyouts are especially common here.</p>
+        </div>
+      </div>
+
+      <h2>Common Situations Where We Buy Partial Interest</h2>
+
+      <div class="scenario-card">
+        <div class="scenario-icon">🏠</div>
+        <div>
+          <h3>Inherited Property With Multiple Heirs</h3>
+          <p>You inherited a 50% share (or 33%, 25%, etc.) of a home along with siblings or other relatives. One party wants to sell, another wants to keep it. We can buy your share and work with the remaining owners, or in some cases purchase the entire property if all heirs agree.</p>
+        </div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="scenario-icon">⚖️</div>
+        <div>
+          <h3>Divorce — One Spouse Wants Out</h3>
+          <p>After a divorce, many couples end up co-owning a home neither of them wants to maintain together. If your ex won't buy you out and selling the whole property is stuck, we can purchase your interest to give you a clean break.</p>
+        </div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="scenario-icon">🤝</div>
+        <div>
+          <h3>Business Partner or Investment Buyout</h3>
+          <p>You co-own a rental or investment property with a business partner and the partnership has run its course. Rather than forcing a full sale that could take months, we can buy one partner's interest or the whole property quickly.</p>
+        </div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="scenario-icon">👴</div>
+        <div>
+          <h3>Succession & Probate Shares</h3>
+          <p>Louisiana successions can leave multiple family members holding fractional interests in a home. If you've received your share through a succession and want to convert it to cash, we handle these regularly.</p>
+        </div>
+      </div>
+
+      <div class="scenario-card">
+        <div class="scenario-icon">📋</div>
+        <div>
+          <h3>Usufruct Situations</h3>
+          <p>Under Louisiana law, a surviving spouse may hold usufruct (the right to use and benefit from the property) while children hold the naked ownership. These situations can be complex — we've navigated them before and can help structure a fair solution.</p>
+        </div>
+      </div>
+
+      <h2>Why Most Buyers Won't Touch Partial Interest</h2>
+      <p>Here's the honest truth about why partial interest buyouts are rare: they're complicated. When you only own a percentage of a property, you can't force a sale on your own. The co-owner has rights too. That means a typical cash buyer who wants a clean title and a simple transaction will walk away.</p>
+      <p>We're willing to do the work that others won't because we understand Louisiana property law, we have relationships with real estate attorneys who handle these situations, and we've structured these deals before. We know how to:</p>
+      <ul>
+        <li>Value a partial interest fairly based on the whole property's worth</li>
+        <li>Work with all co-owners to reach an agreement (when possible)</li>
+        <li>Structure a purchase that gives you cash now even if the other owner isn't selling</li>
+        <li>Navigate usufruct, naked ownership, and other Louisiana-specific situations</li>
+        <li>Coordinate with succession attorneys to ensure clean title transfer</li>
+      </ul>
+
+      <h2>How Is a Partial Interest Valued?</h2>
+      <p>This is the most common question we get — and the honest answer is that a 50% ownership interest is not always worth exactly 50% of the home's market value.</p>
+      <p>Here's why: when you own a partial interest, you can't sell the whole property on your own, you can't get a mortgage against it easily, and you may face co-ownership disputes. That <strong>illiquidity and complexity</strong> typically results in a discount from the straight proportional value.</p>
+      <p>However, our goal is always to make the fairest offer we can. Factors that affect our offer on a partial interest include:</p>
+      <ul>
+        <li>The overall value of the property</li>
+        <li>The percentage of interest you own</li>
+        <li>Whether all co-owners are willing to sell (affects our ability to resell)</li>
+        <li>The condition of the property</li>
+        <li>Any liens, back taxes, or mortgages on the property</li>
+        <li>Louisiana-specific legal complexities (usufruct, successions, etc.)</li>
+      </ul>
+      <p>We'll always explain exactly how we arrived at our offer and give you the time you need to think it over.</p>
+
+      <div class="highlight-box">
+        <h3>Own a Percentage of a Louisiana Property?</h3>
+        <p>We buy partial interest, fractional ownership, and co-ownership shares across all 64 Louisiana parishes. Get a fair cash offer — no obligation, no pressure.</p>
+        <a href="/cash-offer" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--navy);padding:13px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;">💰 Get My Cash Offer</a>
+      </div>
+
+      <h2>How Our Partial Interest Buyout Process Works</h2>
+      <ol class="step-list">
+        <li>
+          <div>
+            <strong>Tell us about the property</strong>
+            Call, text, or fill out our form. Let us know you own a partial interest — tell us the percentage, who the co-owners are, and any background on the situation.
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>We review the ownership structure</strong>
+            We'll look at the deed, ownership split, any succession documents, and the property itself to understand what we're working with.
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>We make you a cash offer</strong>
+            Within 24–48 hours we'll come back with a fair offer on your interest. We'll explain the reasoning and answer any questions.
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>We coordinate with co-owners and attorneys</strong>
+            Depending on the situation, we may work with the other co-owner(s) and your attorney to structure the cleanest possible transaction.
+          </div>
+        </li>
+        <li>
+          <div>
+            <strong>You get paid at closing</strong>
+            Cash in hand. The title transfers and your involvement in the property is done.
+          </div>
+        </li>
+      </ol>
+
+      <h2>What If My Co-Owner Refuses to Sell?</h2>
+      <p>This is the trickiest scenario. In Louisiana, if co-owners can't agree on what to do with a property, the legal remedy is a <strong>partition action</strong> — a lawsuit that forces a court-ordered sale. It's slow, expensive, and adversarial. Nobody really wins.</p>
+      <p>Before it gets to that point, we can often help by:</p>
+      <ul>
+        <li>Buying your interest so you're out of the situation and the other party remains as sole owner</li>
+        <li>Making an offer on the full property that the other co-owner may find convincing</li>
+        <li>Facilitating a conversation between all parties to reach an agreement</li>
+      </ul>
+      <p>We always try to find the solution that gets everyone to a fair outcome without a courtroom.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-section">
+        <div class="faq-item">
+          <div class="faq-question">Can you really buy just my 50% share of a house? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">Yes — this is something we do that most buyers won't. We purchase partial interests and fractional ownership stakes in Louisiana properties. The process is more complex than a standard sale, but we handle it regularly.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What if my co-owner also wants to sell? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">Even better — when all co-owners are on the same page, we can simply buy the whole property, split the proceeds proportionally, and everyone walks away with cash. This is the simplest path forward.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Does the co-owner have to agree for you to buy my share? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">In most cases, you can sell your ownership interest without the co-owner's consent — though we'd need to make sure title can transfer cleanly. If there are restrictions in the original deed or ownership agreement, those would need to be reviewed first.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">I inherited a 1/3 share of my grandparents' house. Can you help? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">Yes — inherited fractional shares through Louisiana successions are one of the most common situations we handle. Reach out and tell us about the property and we'll walk you through your options.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How long does a partial interest sale take? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">It depends on the complexity of the ownership structure. Simple situations can close in 2–3 weeks. More complex ones involving successions, usufruct, or co-owner negotiations may take 4–8 weeks. We'll give you a realistic timeline upfront.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What parishes do you serve? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">All 64 Louisiana parishes — from Orleans and Jefferson to Caddo, Calcasieu, Lafayette, and everywhere in between. If it's in Louisiana, we can help.</div>
+        </div>
+      </div>
+
+      <h2>The Bottom Line</h2>
+      <p>Owning a partial interest in a Louisiana property can feel like being stuck — you have an asset you can't easily use, sell, or borrow against, often tied to a family situation or co-ownership dispute that's draining your energy.</p>
+      <p>We buy partial interest in Louisiana properties because we understand that sometimes the best move is a clean exit, even if it's not a perfect one. We'll make you a fair offer, handle the complexity, and get you to closing as fast as possible.</p>
+      <p><strong>Ready to talk? Call or text Aaron at <a href="tel:+13372700518">(337) 270-0518</a> or fill out the form to get started.</strong></p>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="blog-sidebar">
+      <div class="sidebar-card">
+        <h4>Get a Cash Offer Today</h4>
+        <p>Own a partial interest in a Louisiana property? Tell us about your situation and we'll get back to you within 24 hours.</p>
+        <form class="offer-form" style="margin-top:4px;">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Phone Number" required />
+          </div>
+          <div class="form-group">
+            <input type="text" name="address" placeholder="Property Address" required />
+          </div>
+          <div class="form-group">
+            <select name="ownership_pct">
+              <option value="">Ownership Percentage</option>
+              <option>50% (50/50 split)</option>
+              <option>33% (three-way split)</option>
+              <option>25% or less</option>
+              <option>Other / Not sure</option>
+            </select>
+          </div>
+          <input type="hidden" name="source" value="blog-partial-interest" />
+          <button type="submit" class="btn-primary">Get My Cash Offer →</button>
+          <div class="success-msg">✓ We'll be in touch within 24 hours!</div>
+          <p class="form-disclaimer">No obligation. No fees. 100% confidential.</p>
+        </form>
+      </div>
+
+      <div class="sidebar-card">
+        <h4 style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-light);margin-bottom:12px;">Related Articles</h4>
+        <ul class="sidebar-links">
+          <li><a href="/blog/inherited-property-louisiana">Inherited a House in Louisiana? What to Do Next</a></li>
+          <li><a href="/blog/probate-property-louisiana">Selling a Probate Property in Louisiana</a></li>
+          <li><a href="/blog/selling-house-during-divorce-louisiana">Selling a House During Divorce in Louisiana</a></li>
+          <li><a href="/blog/how-cash-home-buyers-work">How Cash Home Buyers Work</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card" style="background:var(--navy);border-color:var(--navy);">
+        <h4 style="color:#fff;">📞 Talk to Aaron Directly</h4>
+        <p style="color:rgba(255,255,255,0.7);">Partial interest situations are complex. Call us and we'll give you straight answers — no pressure, no obligation.</p>
+        <a href="tel:+13372700518" style="display:block;background:var(--cyan);color:var(--navy);text-align:center;padding:12px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;">(337) 270-0518</a>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+{% endblock %}

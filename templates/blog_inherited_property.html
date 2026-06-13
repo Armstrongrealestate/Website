@@ -1,0 +1,324 @@
+{% extends "base.html" %}
+
+{% block title %}Inherited a House in Louisiana? Here's What to Do Next | Armstrong Buys Houses{% endblock %}
+
+{% block meta_desc %}Inherited a house in Louisiana and not sure what to do? Learn your options — sell as-is for cash, list it, or keep it. Armstrong Buys Houses makes it simple and stress-free.{% endblock %}
+
+{% block meta_keys %}inherited house Louisiana, sell inherited property Louisiana, what to do with inherited home Louisiana, probate property Louisiana, cash buyer inherited house{% endblock %}
+
+{% block canonical %}/blog/inherited-property-louisiana{% endblock %}
+{% block og_url %}/blog/inherited-property-louisiana{% endblock %}
+{% block og_title %}Inherited a House in Louisiana? Here's What to Do Next{% endblock %}
+{% block og_desc %}Lost a loved one and inherited their home? We walk you through your options — and how to sell fast for cash with zero stress.{% endblock %}
+
+{% block head %}
+<style>
+  .blog-hero {
+    background: var(--navy);
+    padding: 60px 0 48px;
+    text-align: center;
+  }
+  .blog-hero .eyebrow { color: var(--cyan); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; display: block; margin-bottom: 14px; }
+  .blog-hero h1 { color: #fff; font-size: clamp(26px, 4vw, 46px); max-width: 780px; margin: 0 auto 16px; line-height: 1.15; }
+  .blog-hero .meta { color: rgba(255,255,255,0.55); font-size: 13px; }
+
+  .blog-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 48px;
+    padding: 60px 0 80px;
+    align-items: start;
+  }
+
+  .blog-body h2 {
+    font-size: clamp(20px, 2.5vw, 28px);
+    color: var(--navy);
+    margin: 40px 0 14px;
+    padding-top: 8px;
+  }
+  .blog-body h3 { font-size: 19px; color: var(--navy); margin: 28px 0 10px; }
+  .blog-body p { color: var(--text-mid); font-size: 16px; line-height: 1.85; margin-bottom: 18px; }
+  .blog-body ul, .blog-body ol { color: var(--text-mid); font-size: 16px; line-height: 1.85; margin: 0 0 18px 20px; }
+  .blog-body li { margin-bottom: 8px; }
+  .blog-body a { color: var(--blue); }
+  .blog-body strong { color: var(--text); font-weight: 600; }
+
+  .blog-intro-box {
+    background: var(--off-white);
+    border-left: 4px solid var(--blue);
+    border-radius: 0 10px 10px 0;
+    padding: 22px 26px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.8;
+  }
+
+  .option-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 18px;
+    box-shadow: var(--shadow);
+  }
+  .option-card h3 { margin: 0 0 8px; font-size: 18px; color: var(--navy); }
+  .option-card p { margin: 0; font-size: 15px; color: var(--text-mid); }
+  .option-card .tag {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--cyan);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+  .option-card .tag.green { background: #22543d; color: #9ae6b4; }
+  .option-card .tag.yellow { background: #744210; color: #fbd38d; }
+
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 18px 0 28px;
+  }
+  .pros, .cons {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .pros { border-top: 3px solid #48bb78; }
+  .cons { border-top: 3px solid #fc8181; }
+  .pros h4 { color: #276749; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .cons h4 { color: #c53030; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .pros li, .cons li { font-size: 14px; margin-bottom: 6px; color: var(--text-mid); }
+
+  .highlight-box {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 14px;
+    padding: 32px;
+    margin: 36px 0;
+    text-align: center;
+  }
+  .highlight-box h3 { color: var(--cyan); font-size: 22px; margin-bottom: 10px; }
+  .highlight-box p { color: rgba(255,255,255,0.8); font-size: 15px; margin-bottom: 20px; }
+
+  /* Sidebar */
+  .blog-sidebar { position: sticky; top: 100px; }
+  .sidebar-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+  }
+  .sidebar-card h4 { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--navy); margin-bottom: 6px; }
+  .sidebar-card p { font-size: 14px; color: var(--text-mid); margin-bottom: 18px; line-height: 1.6; }
+  .sidebar-card .btn-primary { font-size: 14px; padding: 12px 20px; }
+  .sidebar-links { list-style: none; margin: 0; padding: 0; }
+  .sidebar-links li { border-bottom: 1px solid var(--border); }
+  .sidebar-links li:last-child { border-bottom: none; }
+  .sidebar-links a { display: block; padding: 10px 0; font-size: 14px; color: var(--blue); font-weight: 500; }
+  .sidebar-links a:hover { color: var(--navy); }
+
+  .faq-section { margin-top: 48px; }
+
+  @media (max-width: 860px) {
+    .blog-layout { grid-template-columns: 1fr; }
+    .blog-sidebar { position: static; }
+    .pros-cons { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Inherited a House in Louisiana? Here's What to Do Next",
+  "description": "Inherited a house in Louisiana and not sure what to do? Learn your options — sell as-is for cash, list it, or keep it.",
+  "url": "https://www.armstrongbuyshouses.com/blog/inherited-property-louisiana",
+  "datePublished": "2026-06-13",
+  "author": {"@type": "Organization", "name": "Armstrong Buys Houses"},
+  "publisher": {"@type": "Organization", "name": "Armstrong Buys Houses", "url": "https://www.armstrongbuyshouses.com"}
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<div class="blog-hero">
+  <div class="container">
+    <span class="eyebrow">Armstrong Buys Houses — Blog</span>
+    <h1>Inherited a House in Louisiana?<br>Here's What to Do Next</h1>
+    <p class="meta">Published June 13, 2026 &nbsp;·&nbsp; 8 min read &nbsp;·&nbsp; Inherited Property</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="blog-layout">
+
+    <!-- MAIN CONTENT -->
+    <article class="blog-body">
+
+      <div class="blog-intro-box">
+        Losing a loved one is hard enough. Suddenly inheriting their house — with all its memories, maintenance, and decisions — adds a whole new layer of stress. If you've inherited a property in Louisiana and don't know where to start, you're not alone. This guide walks you through your options honestly so you can make the best decision for your family.
+      </div>
+
+      <h2>First: Understanding What You Actually Inherited</h2>
+      <p>When someone passes away and leaves you a home in Louisiana, the property doesn't automatically transfer to you the moment they die. Depending on whether there was a will, whether the estate has to go through <strong>probate</strong>, and how many heirs are involved, the process of actually taking legal ownership can take anywhere from a few weeks to several months.</p>
+      <p>Here's what usually needs to happen first:</p>
+      <ul>
+        <li>The will (if there is one) gets filed with the Louisiana court</li>
+        <li>An executor or administrator is appointed to manage the estate</li>
+        <li>Debts, liens, and back taxes on the property are identified and paid</li>
+        <li>Clear title is established so the property can be transferred or sold</li>
+      </ul>
+      <p>Louisiana follows <strong>civil law</strong> — not common law like most other states — which means the probate process here has some unique rules. In many cases, if the estate is small or the heirs agree, Louisiana allows a simplified process called a <em>small succession affidavit</em> that can speed things up significantly.</p>
+      <p>If you're not sure where the estate stands legally, the first call you should make is to a Louisiana probate attorney. Many offer free consultations.</p>
+
+      <h2>The Three Main Options for an Inherited House</h2>
+      <p>Once you have legal authority to deal with the property, you'll have three realistic paths forward:</p>
+
+      <div class="option-card">
+        <span class="tag green">Option 1</span>
+        <h3>Move In or Keep It as a Rental</h3>
+        <p>If the home is in good shape, paid off or nearly paid off, and you want to hold onto it — this can be a smart long-term wealth move. Rental property in Louisiana can generate solid monthly income. But be realistic: becoming a landlord means handling repairs, tenants, and ongoing costs like insurance, taxes, and maintenance.</p>
+      </div>
+
+      <div class="option-card">
+        <span class="tag yellow">Option 2</span>
+        <h3>List It with a Real Estate Agent</h3>
+        <p>If the home is in decent shape and you're not in a rush, listing on the open market may get you top dollar. However, this process typically takes 3–6 months, requires repairs and staging, and costs 5–6% in commissions plus closing costs. You'll also need to manage showings while potentially still grieving.</p>
+      </div>
+
+      <div class="option-card">
+        <span class="tag">Option 3</span>
+        <h3>Sell to a Cash Buyer As-Is</h3>
+        <p>If you want to close the chapter quickly, avoid the hassle of repairs, and split proceeds among heirs without months of back-and-forth — selling as-is for cash is often the cleanest option. No repairs, no showings, no commissions. Close in as little as 7 days or on whatever timeline works for your family.</p>
+      </div>
+
+      <h2>The Real Costs of Holding an Inherited Property</h2>
+      <p>One thing families often underestimate is how much an inherited house costs to hold while you figure out what to do with it. Every month you own it, you're typically responsible for:</p>
+      <ul>
+        <li><strong>Property taxes</strong> — Louisiana averages around 0.55% of assessed value per year</li>
+        <li><strong>Homeowner's insurance</strong> — especially important in hurricane-prone Louisiana</li>
+        <li><strong>Utilities</strong> — even an empty house needs power and water to prevent mold and damage</li>
+        <li><strong>Maintenance</strong> — lawn care, pest control, and fixing anything that breaks</li>
+        <li><strong>Mortgage payments</strong> — if the deceased had an outstanding loan, payments don't stop</li>
+      </ul>
+      <p>When you add it up, holding a vacant inherited home in Louisiana can cost $1,000–$2,500 per month or more depending on the size and condition of the property.</p>
+
+      <h2>What If There Are Multiple Heirs?</h2>
+      <p>This is where things get complicated fast. If you inherited the property with siblings or other family members, <strong>every heir has to agree</strong> on what to do with it. Louisiana law gives each heir an ownership interest — meaning one person can't simply sell it without the others' consent.</p>
+      <p>Common scenarios we see:</p>
+      <ul>
+        <li>One sibling wants to sell, another wants to keep it — leading to months of standoff</li>
+        <li>Heirs who live out of state and just want to be done with it</li>
+        <li>Families where some heirs need the cash now and others don't</li>
+        <li>Properties that need significant repairs that no one wants to fund</li>
+      </ul>
+      <p>Selling to a cash buyer can actually help resolve these disputes — because there's a clean, specific number on the table that everyone can agree to divide fairly and quickly.</p>
+      <p>If heirs truly can't agree, the legal remedy is a <strong>partition action</strong> — a court-forced sale. It's slow, expensive, and nobody ends up happy. Cash sales avoid this entirely.</p>
+
+      <h2>What About Back Taxes or a Mortgage?</h2>
+      <p>Many inherited properties in Louisiana come with strings attached — outstanding mortgages, unpaid property taxes, or even liens from contractors or judgments. This does not necessarily prevent a sale. When you sell to a cash buyer, these are typically paid off at closing out of the sale proceeds. You walk away clean, without having to come up with the money upfront.</p>
+
+      <div class="highlight-box">
+        <h3>We Buy Inherited Houses in All 64 Louisiana Parishes</h3>
+        <p>As-is condition. Any situation. We close on your timeline and handle all the paperwork. Get a fair cash offer in 24 hours — no obligation.</p>
+        <a href="/cash-offer" class="btn-white" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--navy);padding:13px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;">🏡 Get My Cash Offer</a>
+      </div>
+
+      <h2>How the Process Works With Armstrong Buys Houses</h2>
+      <p>We work with inherited properties regularly — including situations still in probate, properties with multiple heirs, and homes that haven't been touched in years. Here's how it works:</p>
+      <ol>
+        <li><strong>You contact us</strong> — fill out the short form or call (337) 270-0518</li>
+        <li><strong>We review the property</strong> — we may do a quick walkthrough or gather details remotely</li>
+        <li><strong>We make a cash offer</strong> — fair, no-obligation, within 24 hours</li>
+        <li><strong>You choose your closing date</strong> — as fast as 7 days or whenever your family is ready</li>
+        <li><strong>We handle the paperwork</strong> — including coordinating with the estate attorney if needed</li>
+        <li><strong>You get paid</strong> — cash at closing, proceeds split however the estate requires</li>
+      </ol>
+      <p>We buy houses in any condition — whether the home hasn't been updated since the 1970s, has deferred maintenance, storm damage, or belongings still inside. You don't need to clean it out or fix a thing.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-section">
+        <div class="faq-item">
+          <div class="faq-question">Can I sell an inherited house before probate is complete? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">In Louisiana, you generally need legal authority over the estate before you can transfer title. However, we can often begin the process, agree on price, and coordinate closing to coincide with when probate wraps up. We work with estates in all stages.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What if the house is in bad shape? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">We buy houses as-is — no repairs needed. Foundation issues, roof damage, outdated systems, mold — we've seen it all and we still make offers. The condition affects our offer price, but it never prevents us from buying.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Do I have to pay capital gains taxes when I sell an inherited house? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">Inherited property receives a "stepped-up basis" under federal tax law, meaning your cost basis is the fair market value at the time of the original owner's death — not what they originally paid. This often significantly reduces or eliminates capital gains taxes. Always consult a tax professional for your specific situation.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">We have three heirs and one doesn't want to sell. What do we do? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">This is common. We can help facilitate the conversation by putting a concrete, fair offer on the table — sometimes that's all it takes for everyone to agree. If there's a genuine dispute, a Louisiana real estate attorney can advise on next steps including partition actions.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How fast can you close? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">As fast as 7 days once we have clear title. If probate is still in process, we can often coordinate to close immediately after. We work on your family's timeline, not ours.</div>
+        </div>
+      </div>
+
+      <h2>The Bottom Line</h2>
+      <p>There's no single right answer for what to do with an inherited home in Louisiana. The right choice depends on your family's situation, the condition of the property, how quickly you need to resolve it, and whether all heirs are on the same page.</p>
+      <p>What we can tell you is this: if you want a simple, fast, no-hassle solution that puts cash in your hands and closes the chapter on the estate — we're ready to help. We've worked with dozens of Louisiana families in exactly your situation, and we make the process as painless as possible.</p>
+      <p><strong>Call or text us at <a href="tel:+13372700518">(337) 270-0518</a> or fill out the form to get your cash offer in 24 hours.</strong></p>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="blog-sidebar">
+      <div class="sidebar-card">
+        <h4>Get a Cash Offer Today</h4>
+        <p>Inherited a house in Louisiana? We buy as-is, handle all the paperwork, and close on your timeline.</p>
+        <form class="offer-form" style="margin-top:4px;">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="tel" name="phone" placeholder="Phone Number" required />
+          </div>
+          <div class="form-group">
+            <input type="text" name="address" placeholder="Property Address" required />
+          </div>
+          <input type="hidden" name="source" value="blog-inherited-property" />
+          <button type="submit" class="btn-primary">Get My Cash Offer →</button>
+          <div class="success-msg">✓ We'll be in touch within 24 hours!</div>
+          <p class="form-disclaimer">No obligation. No fees. 100% confidential.</p>
+        </form>
+      </div>
+
+      <div class="sidebar-card">
+        <h4 style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-light);margin-bottom:12px;">Related Articles</h4>
+        <ul class="sidebar-links">
+          <li><a href="/blog/probate-property-louisiana">Selling a Probate Property in Louisiana</a></li>
+          <li><a href="/blog/selling-house-during-divorce-louisiana">Selling a House During Divorce in Louisiana</a></li>
+          <li><a href="/blog/tax-delinquent-property-louisiana">What Happens to Tax Delinquent Property in Louisiana</a></li>
+          <li><a href="/blog/how-cash-home-buyers-work">How Cash Home Buyers Work</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card" style="background:var(--navy);border-color:var(--navy);">
+        <h4 style="color:#fff;">📞 Talk to Aaron</h4>
+        <p style="color:rgba(255,255,255,0.7);">Questions about your inherited property? Call or text us directly — no pressure, just answers.</p>
+        <a href="tel:+13372700518" style="display:block;background:var(--cyan);color:var(--navy);text-align:center;padding:12px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;">(337) 270-0518</a>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+{% endblock %}
