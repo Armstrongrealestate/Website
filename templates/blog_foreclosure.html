@@ -28,10 +28,7 @@
 
   .blog-intro-box { background: #fff5f5; border-left: 4px solid #e53e3e; border-radius: 0 10px 10px 0; padding: 22px 26px; margin-bottom: 32px; font-size: 16px; color: var(--text-mid); line-height: 1.8; }
 
-  .timeline-box {
-    background: var(--off-white); border: 1px solid var(--border);
-    border-radius: 14px; padding: 28px 32px; margin: 28px 0;
-  }
+  .timeline-box { background: var(--off-white); border: 1px solid var(--border); border-radius: 14px; padding: 28px 32px; margin: 28px 0; }
   .timeline-box h3 { color: var(--navy); font-size: 18px; margin: 0 0 20px; }
   .timeline-item { display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start; }
   .timeline-item:last-child { margin-bottom: 0; }
@@ -47,8 +44,32 @@
   .option-card .tag.red { background: #fed7d7; color: #c53030; }
   .option-card .tag.yellow { background: #fefcbf; color: #744210; }
   .option-card .tag.green { background: #c6f6d5; color: #22543d; }
+  .option-card .tag.blue { background: #bee3f8; color: #2a4365; }
   .option-card h3 { font-size: 18px; color: var(--navy); margin: 0 0 8px; }
   .option-card p { font-size: 14px; color: var(--text-mid); margin: 0; line-height: 1.7; }
+
+  .subto-box {
+    background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+    border: 2px solid var(--blue);
+    border-radius: 14px;
+    padding: 32px;
+    margin: 32px 0;
+  }
+  .subto-box .label { display: inline-block; background: var(--blue); color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; padding: 4px 12px; border-radius: 100px; margin-bottom: 14px; }
+  .subto-box h3 { color: var(--navy); font-size: 22px; margin: 0 0 14px; }
+  .subto-box p { color: var(--text-mid); font-size: 15px; line-height: 1.85; margin-bottom: 14px; }
+  .subto-box p:last-child { margin-bottom: 0; }
+  .subto-box strong { color: var(--navy); }
+
+  .subto-example {
+    background: #e8f4fd;
+    border: 1px solid #bee3f8;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .subto-example p { color: var(--text-mid); font-size: 14px; margin: 0; line-height: 1.8; }
+  .subto-example strong { color: var(--navy); }
 
   .warning-box { background: #fff5f5; border: 1px solid #feb2b2; border-radius: 12px; padding: 24px 28px; margin: 28px 0; }
   .warning-box h3 { color: #c53030; font-size: 17px; margin: 0 0 10px; font-family: 'DM Sans', sans-serif; font-weight: 700; }
@@ -74,7 +95,6 @@
   .sidebar-links li { border-bottom: 1px solid var(--border); }
   .sidebar-links li:last-child { border-bottom: none; }
   .sidebar-links a { display: block; padding: 10px 0; font-size: 14px; color: var(--blue); font-weight: 500; }
-
   .urgent-sidebar { background: #7b1a1a; border-radius: 14px; padding: 28px; margin-bottom: 20px; }
   .urgent-sidebar h4 { color: #fff; font-family: 'Playfair Display', serif; font-size: 18px; margin-bottom: 8px; }
   .urgent-sidebar p { color: rgba(255,255,255,0.75); font-size: 14px; margin-bottom: 18px; line-height: 1.6; }
@@ -83,16 +103,7 @@
 </style>
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "How to Stop Foreclosure in Louisiana — Sell Your House Fast for Cash",
-  "description": "Facing foreclosure in Louisiana? Learn how selling your house fast for cash can stop the foreclosure process and protect your credit.",
-  "url": "https://www.armstrongbuyshouses.com/blog/sell-house-during-foreclosure-louisiana",
-  "datePublished": "2026-06-13",
-  "author": {"@type": "Organization", "name": "Armstrong Buys Houses"},
-  "publisher": {"@type": "Organization", "name": "Armstrong Buys Houses", "url": "https://www.armstrongbuyshouses.com"}
-}
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"How to Stop Foreclosure in Louisiana — Sell Your House Fast for Cash","description":"Facing foreclosure in Louisiana? Learn how selling your house fast for cash can stop the foreclosure process and protect your credit.","url":"https://www.armstrongbuyshouses.com/blog/sell-house-during-foreclosure-louisiana","datePublished":"2026-06-13","author":{"@type":"Organization","name":"Armstrong Buys Houses"},"publisher":{"@type":"Organization","name":"Armstrong Buys Houses","url":"https://www.armstrongbuyshouses.com"}}
 </script>
 {% endblock %}
 
@@ -111,7 +122,7 @@
     <article class="blog-body">
 
       <div class="blog-intro-box">
-        If you've missed mortgage payments and your lender has started the foreclosure process, the clock is ticking — but it hasn't run out yet. In Louisiana, you typically have time to act before your home is auctioned. Selling your house fast for cash is often the cleanest way to stop foreclosure, protect your credit, and walk away with money in your pocket instead of nothing.
+        If you've missed mortgage payments and your lender has started the foreclosure process, the clock is ticking — but it hasn't run out yet. In Louisiana, you typically have time to act before your home is auctioned. Selling your house fast for cash is often the cleanest way to stop foreclosure, protect your credit, and walk away with money in your pocket instead of nothing. And in some cases, we have another option that could put cash in your hands without selling the home at all.
       </div>
 
       <h2>How Foreclosure Works in Louisiana</h2>
@@ -125,19 +136,19 @@
         </div>
         <div class="timeline-item">
           <div class="t-dot yellow"></div>
-          <div><strong>90–120 days</strong>Lender files a foreclosure lawsuit (petition) in Louisiana district court. You are formally served.</div>
+          <div><strong>90–120 days</strong>Lender files a foreclosure lawsuit in Louisiana district court. You are formally served and the clock speeds up.</div>
         </div>
         <div class="timeline-item">
           <div class="t-dot red"></div>
-          <div><strong>120–180 days</strong>Court proceedings. If no defense or resolution, a judgment of foreclosure is entered.</div>
+          <div><strong>120–180 days</strong>Court proceedings continue. If no resolution, a judgment of foreclosure is entered against you.</div>
         </div>
         <div class="timeline-item">
           <div class="t-dot red"></div>
-          <div><strong>Post-judgment</strong>Sheriff's sale (auction) is scheduled — typically 30–60 days after judgment. Once the property sells at auction, it's gone.</div>
+          <div><strong>Post-judgment</strong>A sheriff's sale (public auction) is scheduled — typically 30–60 days after judgment. Once it sells at auction, it's gone.</div>
         </div>
         <div class="timeline-item">
           <div class="t-dot green"></div>
-          <div><strong>At any point before the auction</strong>You can sell the property, pay off the loan, and stop the foreclosure. This is your window.</div>
+          <div><strong>At any point before the auction</strong>You can sell the property or work out a solution that stops the foreclosure permanently. This is your window — use it.</div>
         </div>
       </div>
 
@@ -147,133 +158,157 @@
         <div class="option-card">
           <span class="tag yellow">Option 1</span>
           <h3>Loan Reinstatement</h3>
-          <p>Pay all missed payments, late fees, attorney fees, and costs to bring the loan current. This stops foreclosure immediately — but requires coming up with a large lump sum that many homeowners simply don't have.</p>
+          <p>Pay all missed payments, late fees, and attorney costs to bring the loan current. This stops foreclosure immediately — but requires coming up with a large lump sum that most homeowners in this situation simply don't have.</p>
         </div>
         <div class="option-card">
           <span class="tag yellow">Option 2</span>
           <h3>Loan Modification or Forbearance</h3>
-          <p>Negotiate with your lender to modify your loan terms or temporarily pause payments. This takes time and approval is not guaranteed. Works best in early stages before a lawsuit is filed.</p>
+          <p>Negotiate with your lender to modify your loan terms or temporarily pause payments. Works best in early stages before a lawsuit is filed. Approval is not guaranteed and the process takes time you may not have.</p>
         </div>
         <div class="option-card">
           <span class="tag red">Option 3</span>
           <h3>Do Nothing — Let It Foreclose</h3>
-          <p>The foreclosure goes through, your home sells at auction (usually far below market value), and you walk away with nothing — plus a foreclosure on your credit record for 7 years that affects your ability to rent, borrow, or buy another home.</p>
+          <p>The foreclosure goes through, your home sells at auction far below market value, and you walk away with nothing — plus a foreclosure on your credit for 7 years that affects your ability to rent, borrow, or buy again.</p>
         </div>
         <div class="option-card">
-          <span class="tag green">Option 4 — Most Recommended</span>
+          <span class="tag green">Option 4 — Most Common</span>
           <h3>Sell Fast for Cash Before the Auction</h3>
-          <p>Sell the property to a cash buyer before the auction date. Your mortgage gets paid off at closing, the foreclosure is stopped, and you walk away with whatever equity remains — plus a voluntary sale (not a foreclosure) on your record, which is far less damaging to your credit.</p>
+          <p>Sell the property to a cash buyer before the auction date. Your mortgage gets paid off at closing, the foreclosure is stopped permanently, and you walk away with whatever equity remains — plus a voluntary sale on your record instead of a foreclosure.</p>
+        </div>
+        <div class="option-card">
+          <span class="tag blue">Option 5 — Ask Us About This</span>
+          <h3>We Take Over Your Payments &amp; Put Cash in Your Pocket</h3>
+          <p>In certain situations, we may be able to step in, take over your existing mortgage payments going forward, and give you cash at closing — without requiring a traditional sale. Keep reading below for a full explanation of how this works.</p>
         </div>
       </div>
 
-      <h2>Why Selling for Cash Beats Foreclosure</h2>
-      <p>Most homeowners in foreclosure don't realize that a voluntary sale — even a fast cash sale below full market value — is dramatically better than letting the bank take the house. Here's why:</p>
+      <!-- SUBJECT-TO EXPLAINED IN PLAIN LANGUAGE -->
+      <div class="subto-box">
+        <span class="label">✦ Special Option — Ask Us If You Qualify</span>
+        <h3>How We Can Take Over Your Payments and Still Put Cash in Your Hands</h3>
+        <p>Most people in foreclosure assume their only options are to sell the house or lose it. But there's a lesser-known solution that works well in certain situations — and it might be exactly what you need.</p>
+        <p>Here's how it works in plain terms: <strong>instead of paying off your mortgage and buying the house outright, we step in and take over your existing loan payments going forward.</strong> The mortgage stays in your name on paper, but we take full responsibility for making the payments every month from that point on.</p>
+        <p>In exchange for letting us do that, <strong>we pay you cash at closing.</strong> The amount depends on your specific situation — how much equity you have, what you owe, and what the home is worth — but the goal is to get you money in your pocket right away while also getting your mortgage current and stopping the foreclosure.</p>
+
+        <div class="subto-example">
+          <p><strong>Simple example:</strong> Let's say your home is worth $180,000 and you owe $150,000 on your mortgage but you're 4 months behind. We step in, get the loan current, take over the monthly payments going forward, and pay you $10,000–$15,000 cash at closing. You walk away with money, the foreclosure stops, and you're no longer responsible for the house or the mortgage payments.</p>
+        </div>
+
+        <p>This option isn't right for every situation, and it depends on factors like your loan type, how much equity you have, and where you are in the foreclosure process. But for homeowners who want to stop foreclosure fast and still walk away with something in their pocket — it's worth a conversation.</p>
+        <p><strong>Call or text us at (337) 270-0518 and ask about this option. We'll tell you within minutes whether it might work for your situation — no pressure, no obligation.</strong></p>
+      </div>
+
+      <h2>Why a Cash Sale Beats Letting It Foreclose</h2>
+      <p>Most homeowners don't realize just how much better a voluntary sale is compared to a completed foreclosure — even if you sell below full market value. Here's the comparison:</p>
       <ul>
-        <li><strong>You may walk away with cash</strong> — if you have equity, you receive the difference after the mortgage payoff. In a foreclosure auction, that equity often evaporates</li>
-        <li><strong>Less credit damage</strong> — a foreclosure stays on your credit for 7 years and can drop your score by 100–150 points. A short sale or cash sale is treated far less harshly</li>
-        <li><strong>No deficiency judgment risk</strong> — in some Louisiana foreclosures, the lender can sue you for the difference if the auction price doesn't cover the loan. A negotiated sale eliminates this</li>
-        <li><strong>You control the timeline</strong> — rather than being evicted after an auction, you negotiate a move-out date that works for you</li>
-        <li><strong>It's over fast</strong> — close in 7 days and put the entire situation behind you</li>
+        <li><strong>You may walk away with cash</strong> — in a foreclosure auction, any equity you have often disappears into fees and below-market sale prices</li>
+        <li><strong>Less credit damage</strong> — a foreclosure drops your score 100–150 points and stays for 7 years; a voluntary sale is treated far less harshly</li>
+        <li><strong>No deficiency judgment risk</strong> — in some Louisiana cases, the lender can sue you for the difference if auction proceeds don't cover the loan; a negotiated sale eliminates this risk</li>
+        <li><strong>You control the timeline</strong> — you negotiate a move-out date instead of being evicted after an auction</li>
+        <li><strong>It's over fast</strong> — close in 7 days and put the situation behind you completely</li>
       </ul>
 
       <div class="warning-box">
         <h3>⚠️ Don't Wait Until the Auction Is Scheduled</h3>
-        <p>Once a sheriff's sale date is set in Louisiana, you have very little time to stop it. The sooner you act, the more options you have. If you're even 30 days behind on payments and worried about foreclosure, call us now — not after you've received the lawsuit.</p>
+        <p>Once a sheriff's sale date is set in Louisiana, your options narrow dramatically. The sooner you reach out, the more solutions we have available. If you're even 30 days behind on payments and worried, call us now — not after the lawsuit has been filed.</p>
       </div>
 
-      <h2>How Armstrong Buys Houses Helps Foreclosure Situations</h2>
-      <p>We work with homeowners in all stages of the foreclosure process — from the first missed payment all the way to days before the sheriff's sale. We've helped Louisiana homeowners in exactly your situation across all 64 parishes.</p>
-      <p>Here's what we do differently:</p>
+      <h2>How We Help Louisiana Homeowners in Foreclosure</h2>
+      <p>We work with homeowners at every stage of the foreclosure process — from the first missed payment all the way to days before the sheriff's sale. Here's what sets us apart:</p>
       <ul>
-        <li>We move fast — cash offer in 24 hours, close in as little as 7 days</li>
-        <li>We coordinate directly with your lender's loss mitigation department when needed</li>
-        <li>We handle all paperwork and closing logistics — you just show up and sign</li>
-        <li>We can sometimes negotiate with the lender to accept a short payoff if you owe more than the home is worth</li>
+        <li>Cash offer within 24 hours, close in as little as 7 days</li>
+        <li>We coordinate with your lender's loss mitigation department when needed</li>
+        <li>We handle all paperwork and closing logistics — you just sign</li>
+        <li>We can explore payment takeover options when a straight cash purchase isn't the best fit</li>
+        <li>We can negotiate with lenders to accept a short payoff if you owe more than the home is worth</li>
         <li>We treat every homeowner with dignity — no judgment, no pressure</li>
       </ul>
 
-      <h2>What Happens at Closing</h2>
+      <h2>What Happens Step by Step</h2>
       <ol class="step-list">
-        <li><div><strong>You contact us</strong>Call, text, or fill out the form. Tell us where the foreclosure stands — how many payments behind, whether a lawsuit has been filed, and the auction date if you know it.</div></li>
-        <li><div><strong>We make a cash offer in 24 hours</strong>Based on your home's value and what's owed, we'll present a fair offer. We'll be upfront about what you'll receive after the mortgage payoff.</div></li>
-        <li><div><strong>We contact your lender</strong>We work with the lender to halt the foreclosure proceedings while we close the transaction.</div></li>
-        <li><div><strong>We close fast</strong>Title company handles the payoff to your lender. You receive any remaining proceeds. The foreclosure is stopped permanently.</div></li>
+        <li><div><strong>You contact us</strong>Call, text, or fill out the form. Tell us where you are in the foreclosure process — how many payments behind, whether a lawsuit has been filed, and the auction date if you know it.</div></li>
+        <li><div><strong>We review your situation and present options</strong>Within 24 hours we'll come back with the best solution for your specific situation — whether that's a cash purchase, a payment takeover arrangement, or a short sale negotiation with your lender.</div></li>
+        <li><div><strong>We move fast</strong>Once you choose the path forward, we coordinate with your lender and the title company to halt the foreclosure and get you to closing as quickly as possible.</div></li>
+        <li><div><strong>You walk away clean</strong>The foreclosure is stopped. You receive your cash. The house and the mortgage are no longer your burden.</div></li>
       </ol>
 
       <div class="highlight-box">
         <h3>Don't Let the Bank Take Your Home</h3>
-        <p>Call or text us today. We can often make a cash offer within hours and close before your auction date. All 64 Louisiana parishes.</p>
+        <p>Call or text us today. We can often make a cash offer within hours and explore all available options — including taking over your payments — before your auction date. All 64 Louisiana parishes.</p>
         <a href="tel:+13372700518" style="display:inline-flex;align-items:center;gap:8px;background:var(--cyan);color:var(--navy);padding:13px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;margin-right:12px;">📞 Call (337) 270-0518</a>
         <a href="/cash-offer" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--navy);padding:13px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;">Get My Cash Offer</a>
       </div>
 
       <h2>What If I Owe More Than the Home Is Worth?</h2>
-      <p>This is called being "underwater" on your mortgage, and it's more common than you think — especially on homes in Louisiana that have lost value due to storm damage, deferred maintenance, or market shifts. If you owe more than the home is worth, a traditional sale won't cover your loan balance.</p>
-      <p>In these cases, we can explore a <strong>short sale</strong> — where the lender agrees to accept less than the full payoff amount in exchange for a clean settlement. We have experience negotiating short sales with Louisiana lenders and can help navigate this process.</p>
-      <p>A short sale is not ideal, but it's significantly better than foreclosure for your credit and financial future.</p>
+      <p>This is called being "underwater" on your mortgage, and it happens more often than people realize — especially on homes in Louisiana that have lost value due to storm damage, deferred maintenance, or market changes. If you owe more than the home is worth, a traditional cash sale won't cover your full loan balance.</p>
+      <p>In these cases, we have two approaches:</p>
+      <ul>
+        <li><strong>Short sale negotiation</strong> — we work with your lender to accept less than the full payoff in exchange for a clean settlement. A short sale is significantly better for your credit than a foreclosure.</li>
+        <li><strong>Payment takeover</strong> — in some underwater situations, taking over the payments still makes sense depending on the loan terms and property value trajectory. We'll analyze your specific numbers.</li>
+      </ul>
 
       <h2>Frequently Asked Questions — Foreclosure in Louisiana</h2>
       <div class="faq-section">
         <div class="faq-item">
           <div class="faq-question">How long does foreclosure take in Louisiana? <span class="faq-toggle">+</span></div>
-          <div class="faq-answer">Louisiana's judicial foreclosure process typically takes 6–18 months from first missed payment to sheriff's sale, depending on court backlogs and whether you contest the lawsuit. This gives you meaningful time to sell if you act early.</div>
+          <div class="faq-answer">Louisiana's judicial foreclosure process typically takes 6–18 months from first missed payment to sheriff's sale, depending on court backlogs and whether the lawsuit is contested. This gives you real time to find a solution if you act now.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question">Can I sell my house after foreclosure proceedings have started? <span class="faq-toggle">+</span></div>
-          <div class="faq-answer">Yes — in Louisiana you can sell your home at any point before the sheriff's sale auction, even after a lawsuit has been filed and a judgment entered. The sale pays off the loan and stops the foreclosure.</div>
+          <div class="faq-answer">Yes — in Louisiana you can sell at any point before the sheriff's sale auction, even after a lawsuit has been filed and a judgment entered. The sale pays off the loan and stops the foreclosure permanently.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How does the payment takeover option work exactly? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">We take responsibility for making your existing mortgage payments going forward. The loan stays in your name temporarily while we take title to the property, make the payments, and eventually refinance or sell the home ourselves. In return, we pay you cash at closing. It's a creative solution that works well in certain situations — call us and we'll tell you quickly if yours qualifies.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question">Will I get any money if I sell during foreclosure? <span class="faq-toggle">+</span></div>
-          <div class="faq-answer">It depends on how much equity you have versus what you owe. If the sale price exceeds your mortgage balance plus any liens, you receive the difference at closing. We'll walk you through the numbers honestly before you decide.</div>
+          <div class="faq-answer">It depends on how much equity you have versus what you owe. If the sale price covers your mortgage balance and any liens, you receive the remainder at closing. We'll walk you through the numbers honestly before you decide on anything.</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">What if I have a second mortgage or liens on the property? <span class="faq-toggle">+</span></div>
-          <div class="faq-answer">Liens, second mortgages, tax liens, and judgment liens all get paid at closing from the sale proceeds — in order of priority. We work with the title company to make sure this is handled correctly.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-question">How does foreclosure affect my credit compared to a cash sale? <span class="faq-toggle">+</span></div>
-          <div class="faq-answer">A completed foreclosure typically drops your credit score 100–150 points and stays on your report for 7 years. A voluntary sale — even a short sale — is recorded differently and has significantly less long-term impact. Many people can qualify for a new mortgage within 2–3 years after a short sale versus 7 years after foreclosure.</div>
+          <div class="faq-question">How does foreclosure affect my credit versus a voluntary sale? <span class="faq-toggle">+</span></div>
+          <div class="faq-answer">A completed foreclosure typically drops your score 100–150 points and stays on your report for 7 years, making it very hard to rent an apartment or buy another home. A voluntary cash sale — even at a discount — is recorded very differently and has far less long-term impact. Many people can qualify for a new mortgage within 2–3 years after a voluntary sale versus 7 years after foreclosure.</div>
         </div>
         <div class="faq-item">
           <div class="faq-question">Do you buy houses in all Louisiana parishes? <span class="faq-toggle">+</span></div>
-          <div class="faq-answer">Yes — all 64 parishes. From New Orleans to Shreveport, Lake Charles to Alexandria, and every rural parish in between. If you're in Louisiana, we can help.</div>
+          <div class="faq-answer">Yes — all 64 parishes. From New Orleans to Shreveport, Lake Charles to Alexandria, DeRidder to Many, and every parish in between. If you're in Louisiana, we can help.</div>
         </div>
       </div>
 
       <h2>The Bottom Line</h2>
-      <p>Foreclosure feels like the end of the road, but it doesn't have to be. Louisiana's judicial process gives you time — and a cash sale gives you options. The worst thing you can do is nothing.</p>
-      <p>Whether you're one payment behind or weeks away from the sheriff's sale, call us today. We'll tell you honestly what we can do, what you'd walk away with, and how fast we can move. No pressure, no judgment — just a straight answer from a local Louisiana buyer who's helped families in exactly your situation.</p>
-      <p><strong>Call or text Aaron directly at <a href="tel:+13372700518">(337) 270-0518</a> — we answer fast.</strong></p>
+      <p>Foreclosure feels like the end of the road, but for most Louisiana homeowners it's not — especially with the time the judicial process gives you. The worst thing you can do is nothing and let the bank make the decision for you.</p>
+      <p>Whether you're one payment behind or days away from the sheriff's sale, call us today. We'll tell you honestly what options are available, what you'd walk away with, and how fast we can move. No pressure, no judgment — just straight answers from a local Louisiana buyer who has helped families in exactly your situation.</p>
+      <p><strong>Call or text Aaron directly at <a href="tel:+13372700518">(337) 270-0518</a> — we answer fast and we move faster.</strong></p>
 
     </article>
 
     <aside class="blog-sidebar">
       <div class="urgent-sidebar">
         <h4>⚠️ Facing Foreclosure?</h4>
-        <p>Don't wait. The sooner you call, the more options you have. We can often make an offer within hours.</p>
+        <p>Don't wait. The sooner you call, the more options we have available. We can often make an offer within hours.</p>
         <a href="tel:+13372700518" style="display:block;background:var(--cyan);color:var(--navy);text-align:center;padding:12px;border-radius:8px;font-weight:700;font-size:15px;text-decoration:none;margin-bottom:10px;">📞 Call (337) 270-0518</a>
         <a href="/cash-offer" style="display:block;background:rgba(255,255,255,0.1);color:#fff;text-align:center;padding:12px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,0.3);">Get My Cash Offer Online</a>
       </div>
 
       <div class="sidebar-card">
-        <h4>Get Your Cash Offer</h4>
-        <p>Facing foreclosure in Louisiana? We respond within hours — not days.</p>
+        <h4>Get Your Options</h4>
+        <p>Tell us about your situation — we'll respond within hours with the best available path forward.</p>
         <form class="offer-form">
           <div class="form-group"><input type="text" name="name" placeholder="Your Name" required /></div>
           <div class="form-group"><input type="tel" name="phone" placeholder="Phone Number" required /></div>
           <div class="form-group"><input type="text" name="address" placeholder="Property Address" required /></div>
           <div class="form-group">
             <select name="foreclosure_stage">
-              <option value="">Foreclosure Stage</option>
+              <option value="">Where are you in the process?</option>
               <option>Behind on payments — no lawsuit yet</option>
-              <option>Lawsuit filed, no judgment yet</option>
-              <option>Judgment entered, no auction date</option>
-              <option>Auction date is set</option>
-              <option>Not sure</option>
+              <option>Lawsuit has been filed</option>
+              <option>Judgment entered, no auction date yet</option>
+              <option>Auction date is scheduled</option>
+              <option>Not sure — just need help</option>
             </select>
           </div>
           <input type="hidden" name="source" value="blog-foreclosure" />
-          <button type="submit" class="btn-primary">Get My Cash Offer →</button>
+          <button type="submit" class="btn-primary">Get My Options →</button>
           <div class="success-msg">✓ We'll call you within hours!</div>
           <p class="form-disclaimer">No obligation. 100% confidential. We move fast.</p>
         </form>
