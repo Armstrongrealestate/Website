@@ -113,17 +113,12 @@ def blog_post(slug):
             'date': 'April 22, 2025',
             'content': 'When it comes time to sell your home...'
         },
-        'avoiding-foreclosure-louisiana': {
-            'title': 'How to Avoid Foreclosure in Louisiana',
-            'date': 'March 10, 2025',
-            'content': 'Facing foreclosure is one of the most stressful situations...'
-        }
     }
     post = posts.get(slug, None)
     return render_template('blog_post.html', post=post, slug=slug, parishes=LOUISIANA_PARISHES)
 
 # ─────────────────────────────────────────
-# BLOG — CITY PAGES (existing)
+# BLOG — CITY PAGES
 # ─────────────────────────────────────────
 
 @app.route('/blog/sell-my-house-fast-lake-charles')
@@ -154,10 +149,6 @@ def blog_lafayette():
 def blog_baton_rouge():
     return render_template('blog_baton_rouge.html', parishes=LOUISIANA_PARISHES)
 
-# ─────────────────────────────────────────
-# BLOG — CITY PAGES (new — your priority markets)
-# ─────────────────────────────────────────
-
 @app.route('/blog/sell-my-house-fast-alexandria-la')
 def blog_alexandria():
     return render_template('blog_alexandria.html', parishes=LOUISIANA_PARISHES)
@@ -173,6 +164,10 @@ def blog_oberlin():
 @app.route('/blog/sell-my-house-fast-iowa-la')
 def blog_iowa():
     return render_template('blog_iowa.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-new-orleans-la')
+def blog_new_orleans():
+    return render_template('blog_new_orleans.html', parishes=LOUISIANA_PARISHES)
 
 # ─────────────────────────────────────────
 # BLOG — TOPIC / SITUATION PAGES
@@ -217,6 +212,30 @@ def blog_relocating():
 @app.route('/blog/sell-house-that-needs-repairs-louisiana')
 def blog_needs_repairs():
     return render_template('blog_needs_repairs.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/we-buy-mobile-homes-louisiana')
+def blog_mobile_homes():
+    return render_template('blog_mobile_homes.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-problem-rental-property-louisiana')
+def blog_rental_property():
+    return render_template('blog_rental_property.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-vacant-house-louisiana')
+def blog_vacant_house():
+    return render_template('blog_vacant_house.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-house-code-violations-louisiana')
+def blog_code_violations():
+    return render_template('blog_code_violations.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-house-with-liens-louisiana')
+def blog_liens():
+    return render_template('blog_liens.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-shreveport-la')
+def blog_shreveport():
+    return render_template('blog_shreveport.html', parishes=LOUISIANA_PARISHES)
 
 # ─────────────────────────────────────────
 # PARISH PAGES
@@ -265,7 +284,13 @@ def sitemap():
         '/blog/behind-on-mortgage-payments-louisiana',
         '/blog/relocating-need-to-sell-house-louisiana',
         '/blog/sell-house-that-needs-repairs-louisiana',
+        '/blog/we-buy-mobile-homes-louisiana',
+        '/blog/sell-problem-rental-property-louisiana',
+        '/blog/sell-vacant-house-louisiana',
+        '/blog/sell-house-code-violations-louisiana',
+        '/blog/sell-house-with-liens-louisiana',
         # City blogs
+        '/blog/sell-my-house-fast-shreveport-la',
         '/blog/sell-my-house-fast-lake-charles',
         '/blog/sell-my-house-fast-deridder',
         '/blog/sell-my-house-fast-leesville',
@@ -277,6 +302,7 @@ def sitemap():
         '/blog/sell-my-house-fast-many-la',
         '/blog/sell-my-house-fast-oberlin-la',
         '/blog/sell-my-house-fast-iowa-la',
+        '/blog/sell-my-house-fast-new-orleans-la',
     ]
     parish_pages = [f'/parish/{p.lower().replace(" ", "-").replace(".", "")}' for p in LOUISIANA_PARISHES]
     all_pages = pages + parish_pages
