@@ -19,7 +19,7 @@
 <section class="section">
   <div class="container">
 
-    <!-- SITUATION / TOPIC BLOGS -->
+    <!-- TOPIC BLOGS -->
     <div style="margin-bottom:56px;">
       <p class="eyebrow">By Situation</p>
       <h2 style="font-size:clamp(22px,3vw,32px);color:var(--navy);margin-bottom:32px;">We've Helped Homeowners in Every Situation</h2>
@@ -28,13 +28,19 @@
         {% set topic_posts = [
           ('inherited-property-louisiana', 'Inherited a House in Louisiana? Here\'s What to Do Next', 'June 13, 2026', 'Lost a loved one and inherited their home? We walk you through your options — and how to sell fast for cash with zero stress.', '📜'),
           ('sell-house-during-foreclosure-louisiana', 'Facing Foreclosure in Louisiana? You Still Have Options.', 'June 13, 2026', 'Behind on payments and worried about losing your home? Learn how to stop foreclosure — including a lesser-known option where we take over your payments and put cash in your pocket.', '🚨'),
-          ('buying-partial-interest-property-louisiana', 'Own 50% of a Property in Louisiana? We Buy Partial Interest.', 'June 13, 2026', 'Most cash buyers won\'t touch a property unless they own 100% of it. We\'re different — we buy fractional ownership and co-ownership shares across all 64 parishes.', '🤝'),
+          ('buying-partial-interest-property-louisiana', 'Own 50% of a Property in Louisiana? We Buy Partial Interest.', 'June 13, 2026', 'Most cash buyers will not touch a property unless they own 100% of it. We are different — we buy fractional ownership and co-ownership shares across all 64 parishes.', '🤝'),
           ('selling-house-during-divorce-louisiana', 'How to Sell Your House During a Divorce in Louisiana', 'June 13, 2026', 'Going through a divorce and need to sell the family home? We handle divorce home sales with care — cash offer in 24 hours, both parties handled professionally.', '⚖️'),
-          ('storm-damage-house-louisiana', 'Selling a Storm, Flood, or Fire Damaged Home in Louisiana', 'June 13, 2026', 'Hurricane, flood, or fire damage doesn\'t have to trap you. We buy damaged homes as-is across all 64 Louisiana parishes — no repairs, no insurance hassles.', '🔥'),
-          ('behind-on-mortgage-payments-louisiana', 'Behind on Mortgage Payments in Louisiana? Here Are Your Options', 'June 15, 2026', 'Missing mortgage payments doesn\'t have to mean losing your home. Learn what happens at each stage and how selling fast for cash can give you a clean way out.', '💸'),
+          ('storm-damage-house-louisiana', 'Selling a Storm, Flood, or Fire Damaged Home in Louisiana', 'June 13, 2026', 'Hurricane, flood, or fire damage does not have to trap you. We buy damaged homes as-is across all 64 Louisiana parishes — no repairs, no insurance hassles.', '🔥'),
+          ('behind-on-mortgage-payments-louisiana', 'Behind on Mortgage Payments in Louisiana? Here Are Your Options', 'June 15, 2026', 'Missing mortgage payments does not have to mean losing your home. Learn what happens at each stage and how selling fast for cash can give you a clean way out.', '💸'),
+          ('we-buy-mobile-homes-louisiana', 'We Buy Mobile Homes in Louisiana — 2010 and Newer', 'June 15, 2026', 'Most cash buyers will not touch a mobile home. We do — we buy 2010 and newer mobile homes with vinyl siding across all 64 Louisiana parishes. Cash offer in 24 hours.', '🏠'),
+          ('relocating-need-to-sell-house-louisiana', 'Relocating and Need to Sell Your Louisiana Home Fast?', 'June 17, 2026', 'Moving for a job, family, or fresh start? Sell your Louisiana home in 7 days so you can relocate without the burden of a property back home.', '📦'),
+          ('sell-problem-rental-property-louisiana', 'Sell a Problem Rental Property in Louisiana', 'June 19, 2026', 'Bad tenants, unpaid rent, constant repairs — we buy problem rental properties in Louisiana with tenants in place. Cash offer in 24 hours, close in 7 days.', '🔑'),
           ('probate-property-louisiana', 'Selling a Probate Property in Louisiana', 'June 18, 2026', 'Dealing with a house stuck in probate or succession in Louisiana? Learn how the process works and how to sell fast for cash once you have legal authority.', '⚖️'),
-          ('sell-house-that-needs-repairs-louisiana', 'Selling a House That Needs Repairs in Louisiana', 'June 20, 2026', 'Don\'t spend a dollar fixing up your house before selling. We buy Louisiana homes in any condition — foundation, roof, mold, outdated everything.', '🔧'),
+          ('sell-house-that-needs-repairs-louisiana', 'Selling a House That Needs Repairs in Louisiana', 'June 20, 2026', 'Do not spend a dollar fixing up your house before selling. We buy Louisiana homes in any condition — foundation, roof, mold, outdated everything.', '🔧'),
           ('tax-delinquent-property-louisiana', 'Tax Delinquent Property in Louisiana — What Happens and How to Sell Fast', 'June 22, 2026', 'Behind on property taxes in Louisiana? Learn exactly what happens, how long you have, and how selling fast for cash can clear the debt and put money in your pocket.', '🏛️'),
+          ('sell-vacant-house-louisiana', 'Sell a Vacant House Fast in Louisiana', 'June 22, 2026', 'An empty house costs you every month it sits there. We buy vacant homes as-is across all 64 Louisiana parishes — no cleanup, no repairs needed.', '🔑'),
+          ('sell-house-code-violations-louisiana', 'Sell a House With Code Violations or Condemned Status in Louisiana', 'June 24, 2026', 'Fines piling up or a condemned notice on the door? We buy homes with active code violations as-is, no repairs or permits required.', '🚧'),
+          ('sell-house-with-liens-louisiana', 'Sell a House With Liens or Unpaid Contractor Debt in Louisiana', 'June 26, 2026', 'A lien does not mean you are stuck. We buy homes with contractor liens, judgments, or tax liens and handle the payoff directly at closing.', '📋'),
         ] %}
 
         {% for slug, title, date, excerpt, icon in topic_posts %}
@@ -44,7 +50,7 @@
             <div style="font-size:12px;color:var(--text-light);margin-bottom:8px;">{{ date }}</div>
             <h3 style="font-size:17px;margin-bottom:10px;line-height:1.4;"><a href="/blog/{{ slug }}" style="color:var(--navy);text-decoration:none;">{{ title }}</a></h3>
             <p style="color:var(--text-mid);font-size:14px;margin-bottom:16px;line-height:1.6;">{{ excerpt }}</p>
-            <a href="/blog/{{ slug }}" style="color:var(--blue);font-weight:600;font-size:14px;">Read More →</a>
+            <a href="/blog/{{ slug }}" style="color:var(--blue);font-weight:600;font-size:14px;">Read More</a>
           </div>
         </div>
         {% endfor %}
@@ -55,7 +61,7 @@
     <!-- CITY BLOGS -->
     <div>
       <p class="eyebrow">By City</p>
-      <h2 style="font-size:clamp(22px,3vw,32px);color:var(--navy);margin-bottom:32px;">We Buy Houses Across Southwest Louisiana</h2>
+      <h2 style="font-size:clamp(22px,3vw,32px);color:var(--navy);margin-bottom:32px;">We Buy Houses Across Louisiana</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;">
 
         {% set city_posts = [
@@ -70,6 +76,8 @@
           ('sell-my-house-fast-alexandria-la', 'Sell My House Fast in Alexandria, LA', 'Rapides Parish'),
           ('sell-my-house-fast-lafayette', 'Sell My House Fast in Lafayette, LA', 'Lafayette Parish'),
           ('sell-my-house-fast-baton-rouge', 'Sell My House Fast in Baton Rouge, LA', 'East Baton Rouge Parish'),
+          ('sell-my-house-fast-new-orleans-la', 'Sell My House Fast in New Orleans, LA', 'Orleans Parish'),
+          ('sell-my-house-fast-shreveport-la', 'Sell My House Fast in Shreveport, LA', 'Caddo Parish'),
         ] %}
 
         {% for slug, title, parish in city_posts %}
@@ -78,7 +86,7 @@
           <div>
             <h3 style="font-size:15px;margin-bottom:4px;line-height:1.4;"><a href="/blog/{{ slug }}" style="color:var(--navy);text-decoration:none;">{{ title }}</a></h3>
             <p style="font-size:12px;color:var(--text-light);margin:0 0 10px;">{{ parish }}</p>
-            <a href="/blog/{{ slug }}" style="color:var(--blue);font-weight:600;font-size:13px;">Read More →</a>
+            <a href="/blog/{{ slug }}" style="color:var(--blue);font-weight:600;font-size:13px;">Read More</a>
           </div>
         </div>
         {% endfor %}
