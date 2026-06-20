@@ -28,7 +28,7 @@ MAJOR_CITIES = {
     "Caddo": ["Shreveport", "Bossier City"],
     "Bossier": ["Bossier City", "Haughton"],
     "Lafayette": ["Lafayette", "Youngsville", "Broussard", "Carencro"],
-    "Calcasieu": ["Lake Charles", "Sulphur", "Westlake"],
+    "Calcasieu": ["Lake Charles", "Sulphur", "Westlake", "Iowa", "Vinton", "DeQuincy", "Moss Bluff"],
     "St. Tammany": ["Covington", "Mandeville", "Slidell"],
     "Livingston": ["Denham Springs", "Walker", "Livingston"],
     "Tangipahoa": ["Hammond", "Ponchatoula", "Amite"],
@@ -39,6 +39,9 @@ MAJOR_CITIES = {
     "Lafourche": ["Thibodaux", "Raceland", "Golden Meadow"],
     "St. Landry": ["Opelousas", "Eunice", "Sunset"],
     "Iberia": ["New Iberia", "Jeanerette"],
+    "Beauregard": ["DeRidder", "Merryville", "Ragley", "Rosepine", "Singer", "Sugartown", "Longville"],
+    "Vernon": ["Leesville", "Rosepine", "Hornbeck", "Anacoco", "Pitkin"],
+    "Allen": ["Oberlin", "Oakdale", "Kinder"],
 }
 
 def get_parish_cities(parish):
