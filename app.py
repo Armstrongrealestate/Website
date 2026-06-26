@@ -40,7 +40,7 @@ MAJOR_CITIES = {
     "St. Landry": ["Opelousas", "Eunice", "Sunset"],
     "Iberia": ["New Iberia", "Jeanerette"],
     "Beauregard": ["DeRidder", "Merryville", "Ragley", "Rosepine", "Singer", "Sugartown", "Longville"],
-    "Vernon": ["Leesville", "Rosepine", "Hornbeck", "Anacoco", "Pitkin"],
+    "Vernon": ["Leesville", "Rosepine", "New Llano", "Anacoco", "Hornbeck", "Pitkin"],
     "Allen": ["Oberlin", "Oakdale", "Kinder"],
 }
 
@@ -171,6 +171,26 @@ def blog_iowa():
 @app.route('/blog/sell-my-house-fast-new-orleans-la')
 def blog_new_orleans():
     return render_template('blog_new_orleans.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-merryville')
+def blog_merryville():
+    return render_template('blog_merryville.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-rosepine')
+def blog_rosepine():
+    return render_template('blog_rosepine.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-new-llano')
+def blog_new_llano():
+    return render_template('blog_new_llano.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-ragley')
+def blog_ragley():
+    return render_template('blog_ragley.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-anacoco')
+def blog_anacoco():
+    return render_template('blog_anacoco.html', parishes=LOUISIANA_PARISHES)
 
 # ─────────────────────────────────────────
 # BLOG — TOPIC / SITUATION PAGES
@@ -306,6 +326,11 @@ def sitemap():
         '/blog/sell-my-house-fast-oberlin-la',
         '/blog/sell-my-house-fast-iowa-la',
         '/blog/sell-my-house-fast-new-orleans-la',
+        '/blog/sell-my-house-fast-merryville',
+        '/blog/sell-my-house-fast-rosepine',
+        '/blog/sell-my-house-fast-new-llano',
+        '/blog/sell-my-house-fast-ragley',
+        '/blog/sell-my-house-fast-anacoco',
     ]
     parish_pages = [f'/parish/{p.lower().replace(" ", "-").replace(".", "")}' for p in LOUISIANA_PARISHES]
     all_pages = pages + parish_pages
