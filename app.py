@@ -344,7 +344,7 @@ def sitemap():
 
 @app.route('/robots.txt')
 def robots():
-    txt = "User-agent: *\nAllow: /\nSitemap: https://www.armstrongbuyshouses.com/sitemap.xml"
+    txt = "User-agent: *\nAllow: /\nDisallow: /submit-offer\nSitemap: https://www.armstrongbuyshouses.com/sitemap.xml"
     return app.response_class(txt, mimetype='text/plain')
 
 if __name__ == '__main__':
