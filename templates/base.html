@@ -37,13 +37,13 @@
   }
   </script>
 
-  <!-- Fonts: non-blocking load (preconnect + preload + async swap) -->
+  <!-- Fonts: non-blocking load with font-display:optional to prevent layout shift (CLS) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=optional" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=optional" media="print" onload="this.media='all'" />
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=optional" />
   </noscript>
 
   <!-- Google Analytics (deferred to not block render) -->
@@ -56,6 +56,24 @@
   </script>
 
   <style>
+    /* Size-adjusted fallback fonts — match webfont metrics so text doesn't reflow on load (prevents CLS) */
+    @font-face {
+      font-family: 'DM Sans Fallback';
+      src: local('Arial');
+      size-adjust: 100%;
+      ascent-override: 92%;
+      descent-override: 24%;
+      line-gap-override: 0%;
+    }
+    @font-face {
+      font-family: 'Playfair Fallback';
+      src: local('Georgia');
+      size-adjust: 108%;
+      ascent-override: 96%;
+      descent-override: 24%;
+      line-gap-override: 0%;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
@@ -74,10 +92,10 @@
       --shadow-lg: 0 16px 48px rgba(0,0,0,0.14);
     }
 
-    /* System-font fallback until webfonts load, prevents invisible text + layout shift */
+    /* Size-adjusted fallback in the stack prevents reflow/CLS until webfonts load */
     html { scroll-behavior: smooth; }
-    body { font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--text); background: #fff; font-size: 16px; line-height: 1.7; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; line-height: 1.2; }
+    body { font-family: 'DM Sans', 'DM Sans Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--text); background: #fff; font-size: 16px; line-height: 1.7; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', 'Playfair Fallback', Georgia, 'Times New Roman', serif; line-height: 1.2; }
     a { color: var(--blue); text-decoration: none; }
     a:hover { color: var(--blue-light); }
     .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
