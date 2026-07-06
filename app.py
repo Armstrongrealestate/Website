@@ -192,6 +192,18 @@ def blog_ragley():
 def blog_anacoco():
     return render_template('blog_anacoco.html', parishes=LOUISIANA_PARISHES)
 
+@app.route('/blog/sell-my-house-fast-franklin')
+def blog_franklin():
+    return render_template('blog_franklin.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-new-iberia')
+def blog_new_iberia():
+    return render_template('blog_new_iberia.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-fire-damaged-house-louisiana')
+def blog_fire_damage():
+    return render_template('blog_fire_damage.html', parishes=LOUISIANA_PARISHES)
+
 # ─────────────────────────────────────────
 # BLOG — TOPIC / SITUATION PAGES
 # ─────────────────────────────────────────
@@ -331,6 +343,9 @@ def sitemap():
         '/blog/sell-my-house-fast-new-llano',
         '/blog/sell-my-house-fast-ragley',
         '/blog/sell-my-house-fast-anacoco',
+        '/blog/sell-my-house-fast-franklin',
+        '/blog/sell-my-house-fast-new-iberia',
+        '/blog/sell-fire-damaged-house-louisiana',
     ]
     parish_pages = [f'/parish/{p.lower().replace(" ", "-").replace(".", "")}' for p in LOUISIANA_PARISHES]
     all_pages = pages + parish_pages
