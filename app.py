@@ -204,6 +204,10 @@ def blog_new_iberia():
 def blog_fire_damage():
     return render_template('blog_fire_damage.html', parishes=LOUISIANA_PARISHES)
 
+@app.route('/blog/sell-vacant-land-louisiana')
+def blog_vacant_land():
+    return render_template('blog_vacant_land.html', parishes=LOUISIANA_PARISHES)
+
 # ─────────────────────────────────────────
 # BLOG — TOPIC / SITUATION PAGES
 # ─────────────────────────────────────────
@@ -346,6 +350,7 @@ def sitemap():
         '/blog/sell-my-house-fast-franklin',
         '/blog/sell-my-house-fast-new-iberia',
         '/blog/sell-fire-damaged-house-louisiana',
+        '/blog/sell-vacant-land-louisiana',
     ]
     parish_pages = [f'/parish/{p.lower().replace(" ", "-").replace(".", "")}' for p in LOUISIANA_PARISHES]
     all_pages = pages + parish_pages
