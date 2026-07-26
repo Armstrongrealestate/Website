@@ -59,6 +59,11 @@ def home():
 def how_it_works():
     return render_template('how_it_works.html', parishes=LOUISIANA_PARISHES)
 
+# Redirect for a phantom URL Google flagged as a soft 404 — sends it to the real How It Works page
+@app.route('/blog/how-cash-home-buyers-work')
+def redirect_how_cash_buyers_work():
+    return redirect('/how-it-works', code=301)
+
 @app.route('/about')
 def about():
     return render_template('about.html', parishes=LOUISIANA_PARISHES)
@@ -208,6 +213,22 @@ def blog_fire_damage():
 def blog_vacant_land():
     return render_template('blog_vacant_land.html', parishes=LOUISIANA_PARISHES)
 
+@app.route('/blog/sell-my-house-fast-broussard')
+def blog_broussard():
+    return render_template('blog_broussard.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-denham-springs')
+def blog_denham_springs():
+    return render_template('blog_denham_springs.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-opelousas')
+def blog_opelousas():
+    return render_template('blog_opelousas.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-my-house-fast-hammond')
+def blog_hammond():
+    return render_template('blog_hammond.html', parishes=LOUISIANA_PARISHES)
+
 # ─────────────────────────────────────────
 # BLOG — TOPIC / SITUATION PAGES
 # ─────────────────────────────────────────
@@ -351,6 +372,10 @@ def sitemap():
         '/blog/sell-my-house-fast-new-iberia',
         '/blog/sell-fire-damaged-house-louisiana',
         '/blog/sell-vacant-land-louisiana',
+        '/blog/sell-my-house-fast-broussard',
+        '/blog/sell-my-house-fast-denham-springs',
+        '/blog/sell-my-house-fast-opelousas',
+        '/blog/sell-my-house-fast-hammond',
     ]
     parish_pages = [f'/parish/{p.lower().replace(" ", "-").replace(".", "")}' for p in LOUISIANA_PARISHES]
     all_pages = pages + parish_pages
