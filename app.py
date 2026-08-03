@@ -229,6 +229,22 @@ def blog_opelousas():
 def blog_hammond():
     return render_template('blog_hammond.html', parishes=LOUISIANA_PARISHES)
 
+@app.route('/blog/sell-inherited-house-lake-charles')
+def blog_inherited_lake_charles():
+    return render_template('blog_inherited_lake_charles.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-inherited-house-deridder')
+def blog_inherited_deridder():
+    return render_template('blog_inherited_deridder.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-inherited-house-leesville')
+def blog_inherited_leesville():
+    return render_template('blog_inherited_leesville.html', parishes=LOUISIANA_PARISHES)
+
+@app.route('/blog/sell-inherited-house-sulphur')
+def blog_inherited_sulphur():
+    return render_template('blog_inherited_sulphur.html', parishes=LOUISIANA_PARISHES)
+
 # ─────────────────────────────────────────
 # BLOG — TOPIC / SITUATION PAGES
 # ─────────────────────────────────────────
@@ -376,6 +392,10 @@ def sitemap():
         '/blog/sell-my-house-fast-denham-springs',
         '/blog/sell-my-house-fast-opelousas',
         '/blog/sell-my-house-fast-hammond',
+        '/blog/sell-inherited-house-lake-charles',
+        '/blog/sell-inherited-house-deridder',
+        '/blog/sell-inherited-house-leesville',
+        '/blog/sell-inherited-house-sulphur',
     ]
     parish_pages = [f'/parish/{p.lower().replace(" ", "-").replace(".", "")}' for p in LOUISIANA_PARISHES]
     all_pages = pages + parish_pages
