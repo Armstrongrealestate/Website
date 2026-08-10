@@ -407,6 +407,15 @@ def sitemap():
     xml += '</urlset>'
     return app.response_class(xml, mimetype='application/xml')
 
+# ── Redirects for retired/mistyped URLs (fixes soft 404s) ──
+@app.route('/blog/storm-damage-property-louisiana')
+def redirect_storm_damage_property():
+    return redirect('/blog/storm-damage-house-louisiana', code=301)
+
+@app.route('/blog/how-cash-home-buyers-work')
+def redirect_how_cash_home_buyers_work():
+    return redirect('/how-it-works', code=301)
+
 @app.route('/robots.txt')
 def robots():
     txt = "User-agent: *\nAllow: /\nDisallow: /submit-offer\nSitemap: https://www.armstrongbuyshouses.com/sitemap.xml"
